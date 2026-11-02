@@ -4,7 +4,7 @@ iPhone Duo のホーム画面デザインを考えるためのリポジトリ。
 
 ## 提案書
 
-- `proposal/iphone-duo-home-screen.html` … 調査結果と5つのデザイン案（モックアップ付き）
+- `proposal/iphone-duo-home-screen.html` … 調査結果とデザイン案（モックアップ付き）。写真は `proposal/img/`
   - 公開ページ（claude.ai の Artifact）: https://claude.ai/artifact/CcPpBTxG9pDkheXbWm3ggR
   - このファイルは Artifact 用のソースで、`<!doctype>` と `<head>` は公開時に付きます。
 
@@ -40,13 +40,34 @@ iPhone Duo は外側（5.4型・1398×2034）と内側（7.6型・1878×2670）�
 - それ以外：ホーム画面に置かず、アプリライブラリから
 - P2（開いた右ページ）：特大ウィジェット。決まるまでは柴の写真
 
+## 第3稿（11月2日）：写真で作り直した3案
+
+第2稿までの壁紙はコードで描いたイラストで、安っぽく見えたため、写真家の写真（Unsplash）に切り替えた。
+外側（縦）と内側（横）で構図を切り直し、主役が折り目やアイコンに隠れない位置に置いている。
+
+| 案 | 外側（閉じた状態） | 内側（開いた状態） | アイコン |
+|---|---|---|---|
+| 星空 | 天の川を縦に | 山並みの上の天の川（中心は左ページ） | クリア |
+| 富士と紅葉 | 紅葉ごしの富士と湖 | 夕焼けの富士と湖（富士は左ページ） | 色合い調整（紺） |
+| 柴と秋 | 紅葉が舞う中の柴犬 | 紅葉の庭と池＋右ページに柴の写真 | クリア |
+
 ### 壁紙（`wallpapers/`）
 
-外側 1398×2034（縦）と内側 2670×1878（横）、昼（day）と夜（night）。柴は赤柴。
+外側用 `*_outer_1398x2034.jpg`、内側用 `*_inner_2670x1878.jpg`。
 
-- `A-hoshimi-no-shiba_*` … A′ 星見の柴
-- `B-shiba-biyori_*` … B′ 柴日和
-- `AxB-tsukiyo-no-hanga_*` … A×B 月夜の版画
+- `hoshizora_*` … 星空
+- `fuji-momiji_*` … 富士と紅葉
+- `shiba-aki_*` … 柴と秋
+
+### 写真のクレジット（Unsplash License）
+
+- 星空：Robson Hatsukami Morgan — https://unsplash.com/photos/silhouette-of-mountains-under-milky-way-galaxy--wEFdRCG4IU
+- 紅葉と富士：Andreas Rasmussen — https://unsplash.com/photos/mount-fuji-and-autumn-maple-leaves-GhvpEtG5HMs
+- 夕焼けの富士：Perry Merrity II — https://unsplash.com/photos/a-snow-covered-mountain-towering-over-a-lake-5P0lI61BIj8
+- 紅葉と柴：Jaycee Xie — https://unsplash.com/photos/a-brown-and-white-dog-standing-next-to-a-tree-aH9Uskj8XTU
+- 紅葉の庭：Lucas Calloch — https://unsplash.com/photos/red-and-green-trees-beside-river-during-daytime-P-yzuyWFEIk
+- 落ち葉と柴：Charlotte Rush — https://unsplash.com/photos/brown-and-white-short-coated-dog-on-brown-leaves-during-daytime-odJtBMxGEfk
+- 浜辺の柴：Marco Grosso — https://unsplash.com/photos/a-happy-shiba-inu-dog-sits-on-a-pebble-beach-En7pqRghArU
 
 ## 調査メモ（デザインに効く事実）
 
