@@ -250,10 +250,13 @@ p{margin:0}
 .vd .w{font-size:3cqw;color:var(--w-accent);font-weight:700;letter-spacing:.2em}
 
 /* Per-concept looks */
-.duo[data-c="dune"][data-mode="light"]{--glass-hi:rgba(255,255,255,.5);--glass-lo:rgba(110,78,48,.26);--glass-shadow:rgba(60,38,15,.65);--label:#fff;--label-shadow:0 .2cqw .5cqw rgba(60,38,15,.7),0 0 1.4cqw rgba(60,38,15,.45);--w-bg:rgba(255,255,255,.42);--w-line:rgba(255,255,255,.6);--w-fg:#2D241B;--w-muted:rgba(45,36,27,.72);--w-accent:#8E531A;--w-blur:blur(14px) saturate(1.5);--dock-bg:rgba(255,255,255,.26);--dock-line:rgba(255,255,255,.6)}
-.duo[data-c="dune"][data-mode="dark"]{--label:#fff;--label-shadow:0 .25cqw .9cqw rgba(0,0,0,.6);--w-bg:rgba(14,18,44,.4);--w-line:rgba(255,255,255,.16);--w-fg:#F4F2FF;--w-muted:rgba(244,242,255,.68);--w-accent:#F3D9A4;--w-blur:blur(14px) saturate(1.4);--dock-bg:rgba(20,24,52,.35);--dock-line:rgba(255,255,255,.16)}
-.duo[data-c="bunko"][data-mode="light"]{--tint:#3B3934;--label:#3A362F;--w-bg:rgba(251,248,241,.88);--w-line:rgba(70,58,44,.18);--w-fg:#2C2924;--w-muted:#6F675B;--w-accent:#A5402A;--dock-bg:rgba(251,248,241,.72);--dock-line:rgba(70,58,44,.16)}
+.duo:is([data-c="dune"],[data-c="hoshimi"])[data-mode="light"]{--glass-hi:rgba(255,255,255,.5);--glass-lo:rgba(110,78,48,.26);--glass-shadow:rgba(60,38,15,.65);--label:#fff;--label-shadow:0 .2cqw .5cqw rgba(60,38,15,.7),0 0 1.4cqw rgba(60,38,15,.45);--w-bg:rgba(255,255,255,.42);--w-line:rgba(255,255,255,.6);--w-fg:#2D241B;--w-muted:rgba(45,36,27,.72);--w-accent:#8E531A;--w-blur:blur(14px) saturate(1.5);--dock-bg:rgba(255,255,255,.26);--dock-line:rgba(255,255,255,.6)}
+.duo:is([data-c="dune"],[data-c="hoshimi"])[data-mode="dark"]{--label:#fff;--label-shadow:0 .25cqw .9cqw rgba(0,0,0,.6);--w-bg:rgba(14,18,44,.4);--w-line:rgba(255,255,255,.16);--w-fg:#F4F2FF;--w-muted:rgba(244,242,255,.68);--w-accent:#F3D9A4;--w-blur:blur(14px) saturate(1.4);--dock-bg:rgba(20,24,52,.35);--dock-line:rgba(255,255,255,.16)}
+.duo:is([data-c="bunko"],[data-c="biyori"])[data-mode="light"]{--tint:#3B3934;--label:#3A362F;--w-bg:rgba(251,248,241,.88);--w-line:rgba(70,58,44,.18);--w-fg:#2C2924;--w-muted:#6F675B;--w-accent:#A5402A;--dock-bg:rgba(251,248,241,.72);--dock-line:rgba(70,58,44,.16)}
 .duo[data-c="bunko"][data-mode="dark"]{--tint:#D9D0BE;--label:#D9D2C4;--w-bg:rgba(42,40,37,.9);--w-line:rgba(255,255,255,.07);--w-fg:#E9E3D6;--w-muted:#A39B8C;--w-accent:#D88A70;--dock-bg:rgba(42,40,37,.72);--dock-line:rgba(255,255,255,.08)}
+.duo[data-c="biyori"][data-mode="dark"]{--tint:#E6DCC6;--label:#E9E2D0;--w-bg:rgba(20,28,50,.84);--w-line:rgba(255,255,255,.08);--w-fg:#EEE7D6;--w-muted:#A9B0C4;--w-accent:#E0957C;--dock-bg:rgba(20,28,50,.66);--dock-line:rgba(255,255,255,.1)}
+.duo[data-c="hanga"][data-mode="dark"]{--tint:#EBDDB3;--label:#F3EBD2;--label-shadow:0 .2cqw .7cqw rgba(0,0,0,.55);--w-bg:rgba(16,26,60,.66);--w-line:rgba(243,233,200,.16);--w-fg:#F3EBD2;--w-muted:#AEB8D3;--w-accent:#F1D38A;--w-blur:blur(12px) saturate(1.2);--dock-bg:rgba(16,26,60,.5);--dock-line:rgba(243,233,200,.16)}
+.duo[data-c="hanga"][data-mode="light"]{--tint:#24477A;--label:#fff;--label-shadow:0 .2cqw .7cqw rgba(20,40,70,.65);--w-bg:rgba(251,248,240,.84);--w-line:rgba(36,71,122,.12);--w-fg:#1E2F4A;--w-muted:#5A6A80;--w-accent:#B9473A;--dock-bg:rgba(251,248,240,.55);--dock-line:rgba(255,255,255,.6)}
 .duo[data-c="night"][data-mode="dark"]{--label:#EEF1FF;--label-shadow:0 .25cqw .9cqw rgba(0,0,0,.7);--w-bg:rgba(13,19,42,.62);--w-line:rgba(150,170,255,.16);--w-fg:#EEF1FF;--w-muted:#9DA8CC;--w-accent:#FFC46E;--w-blur:blur(14px) saturate(1.3);--dock-bg:rgba(13,19,42,.5);--dock-line:rgba(150,170,255,.16)}
 .duo[data-c="night"][data-mode="light"]{--label:#fff;--label-shadow:0 .25cqw .9cqw rgba(30,40,80,.55);--w-bg:rgba(36,46,92,.44);--w-line:rgba(255,255,255,.22);--w-fg:#fff;--w-muted:rgba(255,255,255,.78);--w-accent:#FFD9A8;--w-blur:blur(14px) saturate(1.3);--dock-bg:rgba(36,46,92,.32);--dock-line:rgba(255,255,255,.22)}
 .duo[data-c="kusumi"]{--m-font:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",system-ui,sans-serif}
@@ -262,10 +265,44 @@ p{margin:0}
 .duo[data-c="oshi"][data-mode="light"]{--label:color-mix(in srgb,var(--tint) 45%,#1A1720);--w-bg:rgba(255,255,255,.62);--w-line:rgba(255,255,255,.8);--w-fg:#1F1B26;--w-muted:#5D5866;--w-accent:color-mix(in srgb,var(--tint) 78%,#000);--w-blur:blur(14px) saturate(1.3);--dock-bg:rgba(255,255,255,.45);--dock-line:rgba(255,255,255,.75)}
 .duo[data-c="oshi"][data-mode="dark"]{--label:#fff;--label-shadow:0 .25cqw .9cqw rgba(0,0,0,.6);--w-bg:rgba(18,14,26,.52);--w-line:rgba(255,255,255,.12);--w-fg:#fff;--w-muted:rgba(255,255,255,.7);--w-accent:color-mix(in srgb,var(--tint) 62%,#fff);--w-blur:blur(14px) saturate(1.3);--dock-bg:rgba(18,14,26,.4);--dock-line:rgba(255,255,255,.12)}
 
+
+/* Round 2 */
+.update{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:0 0 8px;padding:12px 18px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-size:.9375rem}
+.update b{color:var(--accent);font-family:var(--f-display)}
+.answers{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.answers li{font-size:.875rem;padding:5px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.answers li span{color:var(--muted);margin-right:8px;font-size:.8125rem}
+.r2-rule{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 36px;padding:24px 26px;border-radius:18px;background:var(--surface);border:1px solid var(--line)}
+@media (max-width:820px){.r2-rule{grid-template-columns:1fr}}
+.r2-rule h3{font-size:1.25rem;margin-bottom:8px}
+.r2-rule p{font-size:.9375rem}
+.slots-list{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:.9375rem;align-content:start}
+.slots-list li{display:grid;grid-template-columns:5.2em minmax(0,1fr);gap:10px;align-items:baseline}
+.slots-list b{font-family:var(--f-display);color:var(--accent);white-space:nowrap}
+.coat-ctl{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:18px}
+.ctl{display:inline-flex;align-items:center;gap:8px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8125rem;color:var(--muted);margin-top:12px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.thumbmap{position:absolute;inset:0;z-index:7;pointer-events:none;background:radial-gradient(ellipse 98% 64% at 106% 86%,rgba(46,190,110,.46) 0 54%,rgba(240,190,50,.40) 54% 77%,rgba(225,70,60,.36) 77%)}
+.tile.slot b{position:relative;font-family:var(--f-display);font-size:5.4cqw;font-weight:900;line-height:1}
+.dock .tile.slot b{font-size:4.6cqw}
+.setup{margin-top:44px;display:grid;gap:14px}
+.setup h3{font-size:1.375rem}
+.setup .hint{font-size:.875rem;color:var(--muted)}
+.checklist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,440px),1fr));gap:10px}
+.checklist label{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:start;padding:14px 16px;border-radius:12px;background:var(--surface);border:1px solid var(--line);cursor:pointer;height:100%}
+.checklist input{width:20px;height:20px;margin:3px 0 0;accent-color:var(--accent)}
+.checklist b{display:block;font-weight:700}
+.checklist small{display:block;color:var(--muted);font-size:.8125rem;line-height:1.7;margin-top:2px}
+.checklist input:checked + span b{text-decoration:line-through;text-decoration-color:var(--muted)}
+.files-note{font-size:.9375rem;padding:14px 18px;border-radius:12px;border:1px dashed var(--line)}
+
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 
 <main class="wrap">
+
+<p class="update"><b>11月2日 更新</b><span>回答をもとに、AとBから作り直した第2稿（3案）を追加しました。</span><a href="#round2">第2稿を見る</a></p>
 
 <header class="hero">
   <div>
@@ -310,6 +347,118 @@ p{margin:0}
   </div>
 </header>
 
+<section class="block" id="round2">
+  <div class="sec-head">
+    <p class="eyebrow">Round 2 · 11月2日</p>
+    <h2>第2稿：あなた用の3案</h2>
+    <p>回答をもとに、AとBを3つの方向に作り直しました。どれも本体はナイトスカイ、右手でケースを付けて持つ前提です。壁紙は自然の風景で、どの案にも柴犬がいます。</p>
+  </div>
+  <ul class="answers" aria-label="もらった回答">
+    <li><span>好きな案</span>A・B</li>
+    <li><span>持ち方</span>右手・ケースあり</li>
+    <li><span>本体</span>ナイトスカイ</li>
+    <li><span>壁紙</span>自然・柴犬</li>
+    <li><span>アプリ</span>これから決める</li>
+    <li><span>開いてすること</span>まだ未定</li>
+  </ul>
+  <div class="r2-rule">
+    <div>
+      <h3>届かない左側は、景色に譲る</h3>
+      <p>右手で持つと、外側の画面の左端には親指が届きません。そこで左半分は壁紙の月と柴を見せる「窓」にして、アプリは右側に集めました。閉じても開いても、月と柴は同じ位置に見えます。</p>
+      <p style="margin-top:10px">アプリはまだ決まっていないので、使う順に入れる場所だけ決めました。各案の「使う順」を押すと番号で見られます。</p>
+      <div class="coat-ctl"><span class="ctl-label" id="coat-label">柴の毛色</span><div class="seg" role="group" aria-labelledby="coat-label" data-coat><button type="button" data-v="aka">赤柴</button><button type="button" data-v="kuro">黒柴</button><button type="button" data-v="shiro">白柴</button></div></div>
+    </div>
+    <ol class="slots-list">
+      <li><b>①〜④</b><span>Dock。閉じても開いても右端にあり、いちばん確実に届きます。</span></li>
+      <li><b>⑤〜⑩</b><span>P1の右2列。右下の⑤から、親指が届きやすい順に入れます。</span></li>
+      <li><b>それ以外</b><span>ホーム画面には置かず、アプリライブラリから開きます。</span></li>
+      <li><b>P2</b><span>開いたときの右ページ。使い方が決まるまでは、柴の写真を大きく。</span></li>
+    </ol>
+  </div>
+
+  <article class="concept" id="hoshimi">
+    <div class="c-head">
+      <span class="c-key" aria-hidden="true">A′</span>
+      <div class="c-title"><h3>星見の柴</h3><span class="en">Stargazing Shiba</span></div>
+      <p class="tagline">Aの砂丘を夜に寄せて、月を見上げる柴の後ろ姿を置きました。ナイトスカイの本体と夜の壁紙がひと続きに見えます。</p>
+    </div>
+    <div class="c-controls">
+      <span class="ctl"><span class="ctl-label" id="hoshimi-mode">時間帯</span><span class="seg" role="group" aria-labelledby="hoshimi-mode" data-ctl="mode"><button type="button" data-v="light">昼</button><button type="button" data-v="dark">夜</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="hoshimi-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="hoshimi-p2" data-ctl="p2"><button type="button" data-v="photo">柴の写真</button><button type="button" data-v="notes">メモ</button><button type="button" data-v="calendar">予定</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="hoshimi-view">アイコン</span><span class="seg" role="group" aria-labelledby="hoshimi-view" data-ctl="view"><button type="button" data-v="apps">アプリ例</button><button type="button" data-v="slots">使う順</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="hoshimi-thumb">親指マップ</span><span class="seg" role="group" aria-labelledby="hoshimi-thumb" data-ctl="thumb"><button type="button" data-v="off">なし</button><button type="button" data-v="on">表示</button></span></span>
+    </div>
+    <div class="stage"></div>
+    <p class="legend" hidden><span><i style="background:rgba(46,190,110,.7)"></i>らくに届く</span><span><i style="background:rgba(240,190,50,.75)"></i>指を伸ばせば届く</span><span><i style="background:rgba(225,70,60,.65)"></i>持ち替えが必要</span><span>右手・ケースありの目安</span></p>
+    <dl class="recipe">
+      <div><dt>壁紙</dt><dd>夜の砂丘で、左上の月を見上げる柴の後ろ姿。昼は太陽と砂丘で、柴は毛色どおりの色になります。外側と内側で、月と柴の位置をそろえています。</dd></div>
+      <div><dt>アイコン</dt><dd>クリア。壁紙の夜空が透けて、アイコンが目立ちすぎません。</dd></div>
+      <div><dt>ウィジェット</dt><dd>P1：天気（小 2×2）を右上に<br>P2：特大 4×6（写真・メモ・予定から選ぶ）</dd></div>
+      <div><dt>この案のよさ</dt><dd>Aの「昼と夜で着替える」しくみはそのままで、夜がいちばんきれいに見えます。</dd></div>
+    </dl>
+  </article>
+
+  <article class="concept" id="biyori">
+    <div class="c-head">
+      <span class="c-key" aria-hidden="true">B′</span>
+      <div class="c-title"><h3>柴日和</h3><span class="en">Shiba Biyori</span></div>
+      <p class="tagline">Bの紙の質感を、藍染めの和紙と水墨の山並みに。岩の上の柴と月に「柴日和」の書と落款を添えた、掛け軸のようなホーム画面です。</p>
+    </div>
+    <div class="c-controls">
+      <span class="ctl"><span class="ctl-label" id="biyori-mode">時間帯</span><span class="seg" role="group" aria-labelledby="biyori-mode" data-ctl="mode"><button type="button" data-v="light">昼</button><button type="button" data-v="dark">夜</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="biyori-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="biyori-p2" data-ctl="p2"><button type="button" data-v="photo">柴の写真</button><button type="button" data-v="notes">メモ</button><button type="button" data-v="calendar">予定</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="biyori-view">アイコン</span><span class="seg" role="group" aria-labelledby="biyori-view" data-ctl="view"><button type="button" data-v="apps">アプリ例</button><button type="button" data-v="slots">使う順</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="biyori-thumb">親指マップ</span><span class="seg" role="group" aria-labelledby="biyori-thumb" data-ctl="thumb"><button type="button" data-v="off">なし</button><button type="button" data-v="on">表示</button></span></span>
+    </div>
+    <div class="stage"></div>
+    <p class="legend" hidden><span><i style="background:rgba(46,190,110,.7)"></i>らくに届く</span><span><i style="background:rgba(240,190,50,.75)"></i>指を伸ばせば届く</span><span><i style="background:rgba(225,70,60,.65)"></i>持ち替えが必要</span><span>右手・ケースありの目安</span></p>
+    <dl class="recipe">
+      <div><dt>壁紙</dt><dd>夜は藍染めの和紙に、白い水墨の山と月。昼は生成りの和紙に墨の山と赤い太陽。見開きの中央には本のノドの影を入れます。</dd></div>
+      <div><dt>アイコン</dt><dd>色合い調整。夜は生成り色、昼は墨色。</dd></div>
+      <div><dt>ウィジェット</dt><dd>P1：縦書きの日付（小 2×2、ウィジェットアプリで作成）<br>P2：特大 4×6（写真・メモ・予定から選ぶ）</dd></div>
+      <div><dt>この案のよさ</dt><dd>藍色がナイトスカイの本体と同じ系統の色。いちばん落ち着いた、大人っぽい仕上がりです。</dd></div>
+    </dl>
+  </article>
+
+  <article class="concept" id="hanga">
+    <div class="c-head">
+      <span class="c-key" aria-hidden="true">A×B</span>
+      <div class="c-title"><h3>月夜の版画</h3><span class="en">Moonlit Print</span></div>
+      <p class="tagline">AとBのいいとこ取り。木版画のように平らな色を重ねた湖と山に、紙の質感（B）と昼夜で着替えるしくみ（A）を合わせました。</p>
+    </div>
+    <div class="c-controls">
+      <span class="ctl"><span class="ctl-label" id="hanga-mode">時間帯</span><span class="seg" role="group" aria-labelledby="hanga-mode" data-ctl="mode"><button type="button" data-v="light">昼</button><button type="button" data-v="dark">夜</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="hanga-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="hanga-p2" data-ctl="p2"><button type="button" data-v="photo">柴の写真</button><button type="button" data-v="notes">メモ</button><button type="button" data-v="calendar">予定</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="hanga-view">アイコン</span><span class="seg" role="group" aria-labelledby="hanga-view" data-ctl="view"><button type="button" data-v="apps">アプリ例</button><button type="button" data-v="slots">使う順</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="hanga-thumb">親指マップ</span><span class="seg" role="group" aria-labelledby="hanga-thumb" data-ctl="thumb"><button type="button" data-v="off">なし</button><button type="button" data-v="on">表示</button></span></span>
+    </div>
+    <div class="stage"></div>
+    <p class="legend" hidden><span><i style="background:rgba(46,190,110,.7)"></i>らくに届く</span><span><i style="background:rgba(240,190,50,.75)"></i>指を伸ばせば届く</span><span><i style="background:rgba(225,70,60,.65)"></i>持ち替えが必要</span><span>右手・ケースありの目安</span></p>
+    <dl class="recipe">
+      <div><dt>壁紙</dt><dd>夜は満月と湖に映る月の道、岸辺に座る柴。昼は青空と白い雲。版画のように平らな色と、紙のざらつきで仕上げています。</dd></div>
+      <div><dt>アイコン</dt><dd>色合い調整。夜は月の金色、昼は藍色。</dd></div>
+      <div><dt>ウィジェット</dt><dd>P1：カレンダー（小 2×2）を右上に<br>P2：特大 4×6（写真・メモ・予定から選ぶ）</dd></div>
+      <div><dt>この案のよさ</dt><dd>3案の中でいちばん色があり、昼も夜も絵として楽しめます。</dd></div>
+    </dl>
+  </article>
+
+  <div class="setup" id="setup">
+    <h3>設定チェックリスト（右手・ケースあり）</h3>
+    <p class="hint">チェックはこのブラウザに保存されます。Duoの壁紙設定の画面はまだ詳しく紹介されていないため、言葉は実機の表示に合わせてください。</p>
+    <ul class="checklist">
+      <li><label><input type="checkbox" id="ck-edge"><span><b>「左端を移動」をオン</b><small>「設定」→「画面表示と明るさ」→「左端を移動」。ケースの縁での誤タッチが減ります。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-wall"><span><b>壁紙を外側用と内側用で設定</b><small>壁紙の画像を写真に保存 →「設定」→「壁紙」→「新しい壁紙を追加」→「写真」。外側には縦長、内側には横長の画像を選びます。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-icon"><span><b>アイコンの見た目を変える</b><small>ホーム画面の空いた所を長押し →「編集」→「カスタマイズ」。A′はクリア、B′とA×Bは色合い調整。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-album"><span><b>「柴」アルバムを作る</b><small>写真アプリで柴の写真を1つのアルバムにまとめます。P2の特大ウィジェットとStandByで使います。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-widget"><span><b>ウィジェットを置く</b><small>「編集」→「ウィジェットを追加」。P1の右上に小、P2に特大の写真を置き、長押しでアルバムを「柴」にします。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-dock"><span><b>Dockに①〜④、右下から⑤〜⑩</b><small>アプリが決まったら、よく使う順に入れていきます。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-tidy"><span><b>残りのアプリはホーム画面から外す</b><small>アイコンを長押し →「Appを削除」→「ホーム画面から取り除く」。アプリ自体は消えず、アプリライブラリに残ります。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-mute"><span><b>消音モードをコントロールセンターに</b><small>コントロールセンター左上の「＋」→「コントロールを追加」→「消音モード」。</small></span></label></li>
+    </ul>
+    <p class="files-note">実寸の壁紙（外側 <span class="num">1398×2034</span>、内側 <span class="num">2670×1878</span>、昼と夜、赤柴）は、チャットとリポジトリの <span class="num">wallpapers</span> フォルダに置いてあります。</p>
+  </div>
+</section>
+
 <section class="block" id="facts">
   <div class="sec-head">
     <p class="eyebrow">Research</p>
@@ -335,7 +484,7 @@ p{margin:0}
 <section class="block" id="concepts">
   <div class="sec-head">
     <p class="eyebrow">Proposals</p>
-    <h2>5つの提案</h2>
+    <h2>第1稿：5つの提案</h2>
     <p>左が閉じたとき（外側＝P1だけ）、右が開いたとき（内側＝P1とP2）。昼と夜を切り替えると、壁紙とアイコンの外観も切り替わります。</p>
   </div>
 
@@ -345,7 +494,7 @@ p{margin:0}
       <div class="c-title"><h3>砂丘時計</h3><span class="en">Dune Hours</span></div>
       <p class="tagline">昼は砂丘、夜は星空。外観モードと一緒に壁紙が着替える、いちばん「Duoらしい」基本形。純正の機能だけで完成します。</p>
     </div>
-    <div class="c-controls"><span class="ctl-label" id="dune-mode">時間帯</span><div class="seg" role="group" aria-labelledby="dune-mode"><button type="button" data-mode="light" aria-pressed="true">昼</button><button type="button" data-mode="dark" aria-pressed="false">夜</button></div></div>
+    <div class="c-controls"><span class="ctl-label" id="dune-mode">時間帯</span><div class="seg" role="group" aria-labelledby="dune-mode" data-ctl="mode"><button type="button" data-v="light" aria-pressed="true">昼</button><button type="button" data-v="dark" aria-pressed="false">夜</button></div></div>
     <div class="stage"></div>
     <dl class="recipe">
       <div><dt>壁紙</dt><dd>砂丘の壁紙ペア。外側は太陽（夜は月）が入る縦の切り抜き、内側は地平線が左右に伸びる横長。ライト版は昼、ダーク版は星空。</dd></div>
@@ -364,7 +513,7 @@ p{margin:0}
       <div class="c-title"><h3>文庫</h3><span class="en">Bunko</span></div>
       <p class="tagline">閉じれば文庫本の表紙、開けば手帳の見開き。紙の質感と墨色のアイコンでまとめた、静かな和のホーム画面。</p>
     </div>
-    <div class="c-controls"><span class="ctl-label" id="bunko-mode">時間帯</span><div class="seg" role="group" aria-labelledby="bunko-mode"><button type="button" data-mode="light" aria-pressed="true">昼</button><button type="button" data-mode="dark" aria-pressed="false">夜</button></div></div>
+    <div class="c-controls"><span class="ctl-label" id="bunko-mode">時間帯</span><div class="seg" role="group" aria-labelledby="bunko-mode" data-ctl="mode"><button type="button" data-v="light" aria-pressed="true">昼</button><button type="button" data-v="dark" aria-pressed="false">夜</button></div></div>
     <div class="stage"></div>
     <dl class="recipe">
       <div><dt>壁紙</dt><dd>外側は生成りの表紙に藍色の題簽（縦書きのタイトル札）。内側は和紙で、中央に本の「ノド」の影を入れます。</dd></div>
@@ -383,7 +532,7 @@ p{margin:0}
       <div class="c-title"><h3>夜間飛行</h3><span class="en">Night Flight</span></div>
       <p class="tagline">機窓から見下ろす夜の街。動画と音楽に寄せた、夜と移動のためのホーム画面。</p>
     </div>
-    <div class="c-controls"><span class="ctl-label" id="night-mode">時間帯</span><div class="seg" role="group" aria-labelledby="night-mode"><button type="button" data-mode="light" aria-pressed="false">夜明け</button><button type="button" data-mode="dark" aria-pressed="true">夜</button></div></div>
+    <div class="c-controls"><span class="ctl-label" id="night-mode">時間帯</span><div class="seg" role="group" aria-labelledby="night-mode" data-ctl="mode"><button type="button" data-v="light" aria-pressed="false">夜明け</button><button type="button" data-v="dark" aria-pressed="true">夜</button></div></div>
     <div class="stage"></div>
     <dl class="recipe">
       <div><dt>壁紙</dt><dd>地球の弧と街の灯り。ライト版は夜明けの雲海。</dd></div>
@@ -402,7 +551,7 @@ p{margin:0}
       <div class="c-title"><h3>くすみ</h3><span class="en">Kusumi Tone</span></div>
       <p class="tagline">アイボリー、グレージュ、くすみピンクの3色だけ。韓国風のやわらかさを、見開きの余白で上品に見せます。</p>
     </div>
-    <div class="c-controls"><span class="ctl-label" id="kusumi-mode">時間帯</span><div class="seg" role="group" aria-labelledby="kusumi-mode"><button type="button" data-mode="light" aria-pressed="true">昼</button><button type="button" data-mode="dark" aria-pressed="false">夜</button></div></div>
+    <div class="c-controls"><span class="ctl-label" id="kusumi-mode">時間帯</span><div class="seg" role="group" aria-labelledby="kusumi-mode" data-ctl="mode"><button type="button" data-v="light" aria-pressed="true">昼</button><button type="button" data-v="dark" aria-pressed="false">夜</button></div></div>
     <div class="stage"></div>
     <dl class="recipe">
       <div><dt>壁紙</dt><dd>グレージュ地に、くすみピンクのアーチ窓、セージ色の丸、小花、チェック柄。</dd></div>
@@ -422,7 +571,7 @@ p{margin:0}
       <p class="tagline">好きな色を1色だけ決めて、アイコンも壁紙も染めます。開くと右ページが推しの写真でいっぱいになります。</p>
     </div>
     <div class="c-controls">
-      <span class="ctl-label" id="oshi-mode">時間帯</span><div class="seg" role="group" aria-labelledby="oshi-mode"><button type="button" data-mode="light" aria-pressed="true">昼</button><button type="button" data-mode="dark" aria-pressed="false">夜</button></div>
+      <span class="ctl-label" id="oshi-mode">時間帯</span><div class="seg" role="group" aria-labelledby="oshi-mode" data-ctl="mode"><button type="button" data-v="light" aria-pressed="true">昼</button><button type="button" data-v="dark" aria-pressed="false">夜</button></div>
       <span class="ctl-label" id="oshi-color">推し色</span><div class="swatches" role="group" aria-labelledby="oshi-color"></div>
     </div>
     <div class="stage"></div>
@@ -459,17 +608,15 @@ p{margin:0}
 <section class="block" id="together">
   <div class="sec-head">
     <p class="eyebrow">Next</p>
-    <h2>一緒に決めたいこと</h2>
-    <p>次の6つを教えてください。あなた専用の配置図と、実寸の壁紙ペアに仕上げます。案を混ぜるのも歓迎です。</p>
+    <h2>次に決めたいこと</h2>
+    <p>第2稿を見て、次の4つを教えてください。まだ決まっていないものは空欄で大丈夫です。</p>
   </div>
   <div class="together">
     <ol class="questions">
-      <li><b>好きな案</b><span>A〜Eのどれが近いか。混ぜたい要素があればそれも（例：Bの紙の質感 ＋ Eの特大写真）。</span></li>
-      <li><b>利き手とケース</b><span>右か左か、ケースを付けるか。アプリを寄せる向きと「左端を移動」を使うかが決まります。</span></li>
-      <li><b>本体の色</b><span>スターホワイトかナイトスカイか。壁紙のベース色を本体に合わせます。</span></li>
-      <li><b>毎日使うアプリ</b><span>8つまで。上位4つをDockに、残りをP1の親指が届く列に置きます。</span></li>
-      <li><b>壁紙のモチーフ</b><span>自分の写真、推し、好きな色、風景など。</span></li>
-      <li><b>開いてすること</b><span>動画、読書、SNSを2つ並べる、仕事、ゲームなど。P2の中身が決まります。</span></li>
+      <li><b>3案のどれにするか</b><span>A′ 星見の柴、B′ 柴日和、A×B 月夜の版画のどれか。混ぜたい要素があればそれも。</span></li>
+      <li><b>柴犬は飼っている子？</b><span>飼っている子がいれば毛色を教えてください。写真をもらえれば、壁紙の柴と特大の写真をその子に合わせます。</span></li>
+      <li><b>使う順のアプリ</b><span>決まったら①〜⑩の順で。①〜④がDock、⑤〜⑩が右下からの順です。</span></li>
+      <li><b>開いた右ページ</b><span>各案の「開いた右ページ」を切り替えて、近いものを。柴の写真・メモ・予定、または未定。</span></li>
     </ol>
     <div class="answer">
       <label for="answer-template">回答テンプレート</label>
@@ -485,9 +632,9 @@ p{margin:0}
   <div class="deliver">
     <b>回答をもらったら作るもの</b>
     <ul>
-      <li>配置図（P1・P2・Dock、アプリ名入り）</li>
-      <li>実寸の壁紙ペア（外側 <span class="num">1398×2034</span> と内側 <span class="num">2670×1878</span>、ライト版とダーク版）</li>
-      <li>設定手順のチェックリスト（アイコンの外観、ウィジェット、ロック画面、App Pair）</li>
+      <li>選んだ案の壁紙の仕上げ（柴の毛色や、あなたの柴の写真に合わせて）</li>
+      <li>アプリ名入りの配置図（P1・P2・Dock）</li>
+      <li>ロック画面とStandByの合わせ方</li>
     </ul>
   </div>
 </section>
@@ -549,6 +696,19 @@ function stars(r,n,x0,x1,y0,y1,rmin,rmax,col){
 }
 function gauss(r){let u=0,v=0;while(u===0)u=r();while(v===0)v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v);}
 function lin(id,stops,x2,y2){return `<linearGradient id="${id}" x1="0" y1="0" x2="${x2||0}" y2="${y2===undefined?1:y2}">${stops.map(([o,c,op])=>`<stop offset="${o}" stop-color="${c}"${op!==undefined?` stop-opacity="${op}"`:""}/>`).join("")}</linearGradient>`;}
+/* smooth ridge line through points (Catmull-Rom), optionally closed to the bottom */
+function ridge(pts, close){
+  let d=`M${pts[0][0]} ${pts[0][1]}`;
+  for(let i=0;i<pts.length-1;i++){
+    const p0=pts[i-1]||pts[i], p1=pts[i], p2=pts[i+1], p3=pts[i+2]||p2;
+    d+=`C${f1(p1[0]+(p2[0]-p0[0])/6)} ${f1(p1[1]+(p2[1]-p0[1])/6)} ${f1(p2[0]-(p3[0]-p1[0])/6)} ${f1(p2[1]-(p3[1]-p1[1])/6)} ${p2[0]} ${p2[1]}`;
+  }
+  return close ? d+`V1000H${pts[0][0]}Z` : d;
+}
+function paperTex(id,L,strength){
+  const a=strength===undefined?(L?.16:.07):strength;
+  return `<filter id="${id}" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 ${L?.32:.92} 0 0 0 0 ${L?.26:.88} 0 0 0 0 ${L?.18:.8} 0 0 0 ${a} 0"/></filter>`;
+}
 
 /* ---------- glyphs ---------- */
 const GL = {
@@ -595,6 +755,44 @@ const APPS = {
   calculator:["計算機","calculator","#FF9F0A"]
 };
 
+/* ---------- Shiba ---------- */
+const COATS = {
+  aka:{ back:{body:"#C8702F",shade:"#A3531C",cream:"#F3E3CA",curl:"#D98A4A"},
+        face:{head:"#D27A3A",ear:"#C46B30",inner:"#F4DCC0",body:"#CF7638",ura:"#F7E9D5",brow:"#F7E9D5"} },
+  kuro:{ back:{body:"#2E2724",shade:"#1D1917",cream:"#EBDDC6",curl:"#9A8A76"},
+        face:{head:"#2E2724",ear:"#241E1B",inner:"#D9B48C",body:"#2B2422",ura:"#F3E7D6",brow:"#E2B888"} },
+  shiro:{ back:{body:"#EEE3D0",shade:"#D6C8AE",cream:"#FBF7EF",curl:"#C9BBA0"},
+        face:{head:"#F1E6D4",ear:"#E6D7BF",inner:"#F2CFC0",body:"#EDE1CD",ura:"#FCF8F1",brow:"#F1E6D4"} }
+};
+const SHIBA_FIXED = {
+  night:{body:"#1B1729",shade:"#110E1C",cream:"#3B3554",curl:"#7A71A3",rim:"#CFC8F2"},
+  moon:{body:"#141C38",shade:"#0D1328",cream:"#2E3A64",curl:"#8C8FB8",rim:"#F1E3B5"},
+  ink:{body:"#34312B",shade:"#26231F",cream:"#777166",curl:"#9A9386"},
+  pale:{body:"#E2D8C2",shade:"#C9BEA5",cream:"#F5EFE1",curl:"#AFA58B"}
+};
+let coat = "aka";
+try{ const c=localStorage.getItem("duo-coat"); if(c && COATS[c]) coat=c; }catch(e){}
+
+/* back view, sitting, curled tail; (x, baseY) = bottom centre, h = height in wallpaper units */
+function shiba(x, baseY, h, P){
+  const s=h/130, tx=x-50*s, ty=baseY-130*s;
+  let o=`<g transform="translate(${f1(tx)} ${f1(ty)}) scale(${s.toFixed(4)})">`+
+   `<ellipse cx="50" cy="129.5" rx="37" ry="4" fill="#000" opacity=".2"/>`+
+   `<path d="M29.5 27L33.6 8.2Q34.6 5.6 36.6 7.4L45.5 17Z" fill="${P.body}"/>`+
+   `<path d="M70.5 27L66.4 8.2Q65.4 5.6 63.4 7.4L54.5 17Z" fill="${P.body}"/>`+
+   `<ellipse cx="24.5" cy="128.4" rx="6.4" ry="2.8" fill="${P.cream}"/><ellipse cx="75.5" cy="128.4" rx="6.4" ry="2.8" fill="${P.cream}"/>`+
+   `<path d="M50 44C38.5 44 30.5 50 29 59C27 71 21 87 19.5 103C18 119 24.5 129.5 37 130H63C75.5 129.5 82 119 80.5 103C79 87 73 71 71 59C69.5 50 61.5 44 50 44Z" fill="${P.body}"/>`+
+   `<path d="M50 44C61.5 44 69.5 50 71 59C73 71 79 87 80.5 103C82 119 75.5 129.5 63 130H58C68.5 126 72.5 116 71 103C69.5 89 63.5 73 61.5 61C60 53 56 46.5 50 44Z" fill="${P.shade}" opacity=".6"/>`+
+   `<ellipse cx="27.2" cy="40" rx="5" ry="6.2" fill="${P.cream}"/><ellipse cx="72.8" cy="40" rx="5" ry="6.2" fill="${P.cream}"/>`+
+   `<path d="M50 14C36.5 14 28 22.5 28 33C28 43.5 37.5 50.5 50 50.5C62.5 50.5 72 43.5 72 33C72 22.5 63.5 14 50 14Z" fill="${P.body}"/>`+
+   `<circle cx="60" cy="100" r="13" fill="${P.cream}"/>`+
+   `<path d="M60 90a10 10 0 1 1-9.5 13.1M60 95.2a5 5 0 1 1-4.8 6.5" fill="none" stroke="${P.curl}" stroke-width="2.6" stroke-linecap="round"/>`;
+  if(P.rim){
+    o+=`<path d="M36.6 7.4Q34.6 5.6 33.6 8.2L29.5 27M25 34.6Q21.4 40 25 45.4M29 59C27 71 21 87 19.5 103" fill="none" stroke="${P.rim}" stroke-width="${(1.6/s).toFixed(2)}" stroke-opacity=".75" stroke-linecap="round" stroke-linejoin="round"/>`;
+  }
+  return o+`</g>`;
+}
+
 /* ---------- photo art (inside photo widgets) ---------- */
 const ART = {
   latte(){
@@ -613,37 +811,66 @@ const ART = {
     for(let i=0;i<80;i++){const x=r()*104-2,y=72+r()*26,c=r()<.82?tint:"#ffffff",rad=.55+r()*.8;s+=`<circle cx="${f1(x)}" cy="${f1(y)}" r="${(rad*3).toFixed(2)}" fill="${c}" opacity=".18"/><circle cx="${f1(x)}" cy="${f1(y)}" r="${rad.toFixed(2)}" fill="${mix(c,"#ffffff",.35)}"/>`;}
     for(let i=0;i<16;i++){s+=`<circle cx="${f1(i*7)}" cy="${f1(99+r()*2)}" r="${f1(4.4+r()*1.2)}" fill="#050409"/>`;}
     return s+`</svg>`;
+  },
+  shibaFace(){
+    const u=uid("sf"), r=mulberry32(41), F=COATS[coat].face;
+    let s=`<svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs>${lin(u+"b",[["0","#E6EFDB"],["1","#A6C59C"]])}</defs><rect width="100" height="100" fill="url(#${u}b)"/>`;
+    for(let i=0;i<10;i++) s+=`<circle cx="${f1(r()*100)}" cy="${f1(r()*48)}" r="${f1(3+r()*7)}" fill="#fff" opacity="${(.15+r()*.25).toFixed(2)}"/>`;
+    s+=`<g transform="translate(5 8) scale(.9)">`+
+     `<path d="M10 100C12 84 28 76 50 76C72 76 88 84 90 100Z" fill="${F.body}"/>`+
+     `<path d="M35 100C37 88 43 81 50 81C57 81 63 88 65 100Z" fill="${F.ura}"/>`+
+     `<path d="M28.5 36L31 12.5Q32 9.5 34.8 11.3L47 24Z" fill="${F.ear}"/><path d="M31.6 31L33.2 16.5L42.5 24.6Z" fill="${F.inner}"/>`+
+     `<path d="M53 24L65.2 11.3Q68 9.5 69 12.5L71.5 36Z" fill="${F.ear}"/><path d="M57.5 24.6L66.8 16.5L68.4 31Z" fill="${F.inner}"/>`+
+     `<path d="M50 22C32 22 21.5 34 21.5 50C21.5 66 34 78 50 78C66 78 78.5 66 78.5 50C78.5 34 68 22 50 22Z" fill="${F.head}"/>`+
+     `<path d="M22.5 55C25 70 37 79 50 79C63 79 75 70 77.5 55C71 60 63 60 58 55C56 52 44 52 42 55C37 60 29 60 22.5 55Z" fill="${F.ura}"/>`+
+     `<ellipse cx="38" cy="40.5" rx="3.2" ry="2.1" fill="${F.brow}"/><ellipse cx="62" cy="40.5" rx="3.2" ry="2.1" fill="${F.brow}"/>`+
+     `<ellipse cx="38.5" cy="48" rx="3" ry="3.5" fill="#2A1E17"/><ellipse cx="61.5" cy="48" rx="3" ry="3.5" fill="#2A1E17"/>`+
+     `<circle cx="39.6" cy="46.6" r="1" fill="#fff"/><circle cx="62.6" cy="46.6" r="1" fill="#fff"/>`+
+     `<path d="M45.5 58.5Q50 56.2 54.5 58.5Q54.4 61.8 50 63.6Q45.6 61.8 45.5 58.5Z" fill="#2A1E17"/>`+
+     `<path d="M50 63.6V66.4M50 66.4Q46.8 69.4 43.6 67.6M50 66.4Q53.2 69.4 56.4 67.6" fill="none" stroke="#2A1E17" stroke-width="1.3" stroke-linecap="round"/>`+
+     `<path d="M32 80.5Q50 89 68 80.5" fill="none" stroke="#B9473A" stroke-width="3" stroke-linecap="round"/>`+
+     `</g></svg>`;
+    return s;
   }
 };
 
 /* ---------- wallpapers (1420 × 1000 space; cover is a 687-wide window) ---------- */
 const SPREAD = "0 0 1420 1000";
+function duneBody(u, L, r, cx, cy){
+  const sky=L?[["0","#7F9EC6"],[".46","#B9CADC"],[".6","#E6D1B4"]]:[["0","#050A1C"],[".5","#121A3B"],[".64","#3A3456"]];
+  let b=`<defs>${lin(u+"s",sky)}${lin(u+"a",L?[["0","#DDC29C"],["1","#CBA77D"]]:[["0","#2B2739"],["1","#211E2E"]])}${lin(u+"b",L?[["0","#E7CDA6"],["1","#D1AC7F"]]:[["0","#262233"],["1","#1C1929"]])}${lin(u+"c",L?[["0","#F0D9B6"],["1","#DCB789"]]:[["0","#201D2C"],["1","#161420"]])}<radialGradient id="${u}g"><stop offset="0" stop-color="${L?"#FFF6E6":"#E9E3FF"}" stop-opacity="${L?.9:.4}"/><stop offset="1" stop-color="${L?"#FFF6E6":"#E9E3FF"}" stop-opacity="0"/></radialGradient></defs>`;
+  b+=`<rect width="1420" height="1000" fill="url(#${u}s)"/>`;
+  if(!L){ b+=stars(r,230,0,1420,0,600,.6,2.2,"#FFFFFF"); b+=stars(r,140,200,1300,40,420,.4,1.1,"#DCD6FF"); }
+  b+=`<circle cx="${cx}" cy="${cy}" r="${L?170:120}" fill="url(#${u}g)"/>`;
+  b+=L?`<circle cx="${cx}" cy="${cy}" r="34" fill="#FFF8EC"/>`:`<mask id="${u}cm"><rect x="${cx-40}" y="${cy-40}" width="80" height="80" fill="#000"/><circle cx="${cx}" cy="${cy}" r="23" fill="#fff"/><circle cx="${cx+10}" cy="${cy-6}" r="20.5" fill="#000"/></mask><circle cx="${cx}" cy="${cy}" r="23" fill="#F3EDD9" mask="url(#${u}cm)"/>`;
+  b+=`<path d="M0 575L110 520L200 548L320 470L430 528L560 486L690 545L820 476L960 534L1080 494L1200 552L1320 502L1420 530V1000H0Z" fill="${L?"#B9A796":"#24223A"}" opacity=".85"/>`;
+  b+=`<path d="M0 612L140 585L260 600L380 560L520 604L660 580L800 610L940 572L1080 606L1220 584L1420 600V1000H0Z" fill="${L?"#A8917B":"#1C1A2E"}"/>`;
+  const d1="M0 650C220 575 380 610 560 628C760 648 900 570 1100 590C1250 605 1340 628 1420 620";
+  const d2="M0 770C180 700 340 712 520 750C700 788 820 672 1020 700C1180 722 1300 786 1420 768";
+  const d3="M0 890C200 830 420 850 600 905C780 960 980 830 1180 858C1300 874 1380 902 1420 908";
+  const rim=L?"#FBEBD3":"#7D72A6", shade=L?"rgba(120,80,40,.12)":"rgba(0,0,0,.28)";
+  b+=`<path d="${d1}V1000H0Z" fill="url(#${u}a)"/><path d="M560 628C760 648 900 570 1100 590C960 640 760 680 560 628Z" fill="${shade}"/>`;
+  b+=`<path d="${d2}V1000H0Z" fill="url(#${u}b)"/><path d="M520 750C700 788 820 672 1020 700C880 760 700 820 520 750Z" fill="${shade}"/>`;
+  b+=`<path d="${d3}V1000H0Z" fill="url(#${u}c)"/>`;
+  b+=`<path d="${d1}" fill="none" stroke="${rim}" stroke-width="2" opacity="${L?.7:.4}"/><path d="${d2}" fill="none" stroke="${rim}" stroke-width="2" opacity="${L?.7:.4}"/><path d="${d3}" fill="none" stroke="${rim}" stroke-width="2" opacity="${L?.6:.35}"/>`;
+  for(let i=0;i<6;i++){b+=`<path d="M${80+i*40} ${932+i*11}C${380+i*30} ${902+i*10} ${700+i*20} ${978+i*4} ${1000+i*30} ${942+i*8}" fill="none" stroke="${L?"rgba(150,105,60,.18)":"rgba(140,130,190,.12)"}" stroke-width="2"/>`;}
+  return b;
+}
 const WALL = {
   dune(mode, fmt){
-    const u=uid("du"), L=mode==="light", r=mulberry32(11);
-    const sky=L?[["0","#7F9EC6"],[".46","#B9CADC"],[".6","#E6D1B4"]]:[["0","#050A1C"],[".5","#121A3B"],[".64","#3A3456"]];
-    let b=`<defs>${lin(u+"s",sky)}${lin(u+"a",L?[["0","#DDC29C"],["1","#CBA77D"]]:[["0","#2B2739"],["1","#211E2E"]])}${lin(u+"b",L?[["0","#E7CDA6"],["1","#D1AC7F"]]:[["0","#262233"],["1","#1C1929"]])}${lin(u+"c",L?[["0","#F0D9B6"],["1","#DCB789"]]:[["0","#201D2C"],["1","#161420"]])}<radialGradient id="${u}g"><stop offset="0" stop-color="${L?"#FFF6E6":"#E9E3FF"}" stop-opacity="${L?.9:.4}"/><stop offset="1" stop-color="${L?"#FFF6E6":"#E9E3FF"}" stop-opacity="0"/></radialGradient></defs>`;
-    b+=`<rect width="1420" height="1000" fill="url(#${u}s)"/>`;
-    if(!L){ b+=stars(r,230,0,1420,0,600,.6,2.2,"#FFFFFF"); b+=stars(r,140,200,1300,40,420,.4,1.1,"#DCD6FF"); }
-    const sy=L?330:250;
-    b+=`<circle cx="1090" cy="${sy}" r="${L?170:120}" fill="url(#${u}g)"/>`;
-    b+=L?`<circle cx="1090" cy="${sy}" r="34" fill="#FFF8EC"/>`:`<circle cx="1090" cy="${sy}" r="19" fill="#F3EDD9"/><circle cx="1098" cy="${sy-5}" r="17" fill="#141C3D" opacity=".9"/>`;
-    b+=`<path d="M0 575L110 520L200 548L320 470L430 528L560 486L690 545L820 476L960 534L1080 494L1200 552L1320 502L1420 530V1000H0Z" fill="${L?"#B9A796":"#24223A"}" opacity=".85"/>`;
-    b+=`<path d="M0 612L140 585L260 600L380 560L520 604L660 580L800 610L940 572L1080 606L1220 584L1420 600V1000H0Z" fill="${L?"#A8917B":"#1C1A2E"}"/>`;
-    const d1="M0 650C220 575 380 610 560 628C760 648 900 570 1100 590C1250 605 1340 628 1420 620";
-    const d2="M0 770C180 700 340 712 520 750C700 788 820 672 1020 700C1180 722 1300 786 1420 768";
-    const d3="M0 890C200 830 420 850 600 905C780 960 980 830 1180 858C1300 874 1380 902 1420 908";
-    const rim=L?"#FBEBD3":"#7D72A6", shade=L?"rgba(120,80,40,.12)":"rgba(0,0,0,.28)";
-    b+=`<path d="${d1}V1000H0Z" fill="url(#${u}a)"/><path d="M560 628C760 648 900 570 1100 590C960 640 760 680 560 628Z" fill="${shade}"/>`;
-    b+=`<path d="${d2}V1000H0Z" fill="url(#${u}b)"/><path d="M520 750C700 788 820 672 1020 700C880 760 700 820 520 750Z" fill="${shade}"/>`;
-    b+=`<path d="${d3}V1000H0Z" fill="url(#${u}c)"/>`;
-    b+=`<path d="${d1}" fill="none" stroke="${rim}" stroke-width="2" opacity="${L?.7:.4}"/><path d="${d2}" fill="none" stroke="${rim}" stroke-width="2" opacity="${L?.7:.4}"/><path d="${d3}" fill="none" stroke="${rim}" stroke-width="2" opacity="${L?.6:.35}"/>`;
-    for(let i=0;i<6;i++){b+=`<path d="M${80+i*40} ${932+i*11}C${380+i*30} ${902+i*10} ${700+i*20} ${978+i*4} ${1000+i*30} ${942+i*8}" fill="none" stroke="${L?"rgba(150,105,60,.18)":"rgba(140,130,190,.12)"}" stroke-width="2"/>`;}
-    return {vb: fmt==="cover"?"733 0 687 1000":SPREAD, body:b};
+    const L=mode==="light";
+    return {vb: fmt==="cover"?"733 0 687 1000":SPREAD, body: duneBody(uid("du"), L, mulberry32(11), 1090, L?330:250)};
+  },
+  hoshimi(mode, fmt){
+    const L=mode==="light";
+    let b=duneBody(uid("hs"), L, mulberry32(13), 190, L?200:175);
+    if(!L) b+=`<path d="M70 330L150 292" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" opacity=".85"/><path d="M30 349L70 330" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" opacity=".35"/>`;
+    b+=shiba(208, 726, 118, L?COATS[coat].back:SHIBA_FIXED.night);
+    return {vb: fmt==="cover"?"0 0 687 1000":SPREAD, body:b};
   },
   bunko(mode, fmt){
     const u=uid("bk"), L=mode==="light", r=mulberry32(7);
-    const tex=`<filter id="${u}n" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="3"/><feColorMatrix values="0 0 0 0 ${L?.32:.92} 0 0 0 0 ${L?.26:.88} 0 0 0 0 ${L?.18:.8} 0 0 0 ${L?.16:.07} 0"/></filter>`;
+    const tex=paperTex(u+"n",L);
     const fibers=(w,col)=>{let s="";for(let i=0;i<70;i++){const x=r()*w,y=r()*1000,l=20+r()*60,a=r()*Math.PI;s+=`<path d="M${f1(x)} ${f1(y)}q${f1(Math.cos(a)*l/2)} ${f1(Math.sin(a)*l/2+6)} ${f1(Math.cos(a)*l)} ${f1(Math.sin(a)*l)}" stroke="${col}" stroke-width=".9" fill="none" opacity=".55"/>`;}return s;};
     const vt=(x,y,size,txt,col,ls)=>`<text x="${x}" y="${y}" fill="${col}" style="writing-mode:vertical-rl;font-family:'Zen Old Mincho','Hiragino Mincho ProN',serif;font-size:${size}px;font-weight:700;letter-spacing:${ls||.25}em">${txt}</text>`;
     if(fmt==="cover"){
@@ -661,6 +888,61 @@ const WALL = {
     b+=vt(72,610,30,"十一月の頁",ink,.35);
     b+=`<rect x="56" y="930" width="30" height="30" rx="3" fill="${seal}"/><text x="71" y="952" text-anchor="middle" fill="${L?"#F6EEE6":"#E9D8CC"}" style="font-family:'Zen Old Mincho',serif;font-size:19px;font-weight:700">帖</text>`;
     return {vb:SPREAD, body:b};
+  },
+  biyori(mode, fmt){
+    const u=uid("by"), L=mode==="light", r=mulberry32(17);
+    const paper=L?"#ECE6DA":"#1B2640", fiber=L?"#D1C6B2":"#2A3656";
+    const M=L?["#D3CDC2","#A8A297","#6F6A62"]:["#283657","#33446C","#40558A"];
+    const rock=L?"#4A463F":"#121A30", ink=L?"#3E3B36":"#E7DFCB", seal=L?"#B0442E":"#A9442F";
+    let defs=paperTex(u+"n",L)+`<filter id="${u}m" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="18"/></filter>`;
+    M.forEach((c,i)=>defs+=lin(u+"l"+i,[["0",c],[".5",c],["1",paper]]));
+    defs+=lin(u+"g",[["0","#000",0],[".5","#000",L?.13:.4],["1","#000",0]],1,0)+lin(u+"h",[["0","#fff",0],[".5","#fff",L?.35:.05],["1","#fff",0]],1,0);
+    defs+=`<radialGradient id="${u}o"><stop offset="0" stop-color="#EFE7D2" stop-opacity=".35"/><stop offset="1" stop-color="#EFE7D2" stop-opacity="0"/></radialGradient>`;
+    let b=`<defs>${defs}</defs><rect width="1420" height="1000" fill="${paper}"/>`;
+    for(let i=0;i<70;i++){const x=r()*1420,y=r()*1000,l=20+r()*60,a=r()*Math.PI;b+=`<path d="M${f1(x)} ${f1(y)}q${f1(Math.cos(a)*l/2)} ${f1(Math.sin(a)*l/2+6)} ${f1(Math.cos(a)*l)} ${f1(Math.sin(a)*l)}" stroke="${fiber}" stroke-width=".9" fill="none" opacity=".55"/>`;}
+    if(L) b+=`<circle cx="215" cy="175" r="44" fill="#C4553A" opacity=".85"/>`;
+    else  b+=`<circle cx="215" cy="165" r="110" fill="url(#${u}o)"/><circle cx="215" cy="165" r="40" fill="#EFE7D2"/>`;
+    const far=[[-20,560],[60,470],[120,500],[190,400],[250,450],[330,350],[400,420],[470,380],[540,470],[620,420],[700,500],[790,410],[860,470],[960,380],[1040,460],[1130,400],[1220,480],[1320,420],[1440,500]];
+    const mid=[[-20,700],[50,610],[120,560],[190,430],[262,300],[330,430],[385,520],[450,470],[520,560],[600,520],[680,600],[760,540],[850,620],[940,520],[1030,600],[1120,540],[1220,620],[1320,560],[1440,640]];
+    const near=[[-20,800],[60,740],[140,770],[220,700],[300,760],[380,690],[470,750],[560,700],[650,780],[740,720],[840,790],[940,730],[1040,800],[1150,740],[1260,800],[1360,750],[1440,800]];
+    [far,mid,near].forEach((pts,i)=>{
+      b+=`<path d="${ridge(pts,true)}" fill="url(#${u}l${i})"/>`;
+      b+=`<ellipse cx="710" cy="${[600,720,850][i]}" rx="820" ry="34" fill="${paper}" opacity=".85" filter="url(#${u}m)"/>`;
+    });
+    b+=`<path d="M60 1000L82 862Q112 820 172 814Q250 808 300 832Q342 852 352 1000Z" fill="${rock}"/>`;
+    const pad=(x,y,w,h)=>`<ellipse cx="${x}" cy="${y}" rx="${w}" ry="${h}" fill="${rock}"/><ellipse cx="${f1(x-w*.38)}" cy="${f1(y-h*.6)}" rx="${f1(w*.42)}" ry="${f1(h*.85)}" fill="${rock}"/><ellipse cx="${f1(x+w*.28)}" cy="${f1(y-h*.7)}" rx="${f1(w*.5)}" ry="${f1(h*.95)}" fill="${rock}"/>`;
+    b+=`<path d="M292 838C300 802 288 772 318 742C326 732 334 724 344 714" fill="none" stroke="${rock}" stroke-width="7" stroke-linecap="round"/><path d="M304 790C292 782 284 778 274 776" fill="none" stroke="${rock}" stroke-width="4" stroke-linecap="round"/>`+pad(322,740,40,10)+pad(280,776,26,8)+pad(346,712,26,7);
+    b+=shiba(186, 818, 112, L?SHIBA_FIXED.ink:SHIBA_FIXED.pale);
+    b+=`<text x="64" y="72" fill="${ink}" style="writing-mode:vertical-rl;font-family:'Zen Old Mincho','Hiragino Mincho ProN',serif;font-size:44px;font-weight:700;letter-spacing:.3em">柴日和</text>`;
+    b+=`<rect x="49" y="268" width="30" height="30" rx="3" fill="${seal}"/><text x="64" y="290" text-anchor="middle" fill="#F6EEE6" style="font-family:'Zen Old Mincho',serif;font-size:19px;font-weight:700">柴</text>`;
+    if(fmt!=="cover") b+=`<rect x="610" y="0" width="200" height="1000" fill="url(#${u}g)"/><rect x="560" y="0" width="60" height="1000" fill="url(#${u}h)"/><rect x="800" y="0" width="60" height="1000" fill="url(#${u}h)"/>`;
+    b+=`<rect width="1420" height="1000" filter="url(#${u}n)"/>`;
+    return {vb: fmt==="cover"?"0 0 687 1000":SPREAD, body:b};
+  },
+  hanga(mode, fmt){
+    const u=uid("hg"), L=mode==="light", r=mulberry32(29);
+    const C=L?{s0:"#3D76B3",s1:"#9CC2DF",s2:"#EEF1EC",far:"#86A3BC",mid:"#557F86",pine:"#2C4A3A",l0:"#6E9EC2",l1:"#3C6D98",bank:"#3E5E3A",ref:"#FFFFFF",cloud:"#FBF8F0",cloudSh:"#D6DEE6",reed:"#5C7B4A"}
+             :{s0:"#121C40",s1:"#2C4577",s2:"#7389B5",far:"#3A5182",mid:"#283B67",pine:"#16234A",l0:"#25386A",l1:"#121E42",bank:"#0F1734",ref:"#F3E9C8",cloud:"#3B5590",cloudSh:"#2C4374",reed:"#1D2A52"};
+    let b=`<defs>${lin(u+"s",[["0",C.s0],[".52",C.s1],[".64",C.s2]])}${lin(u+"w",[["0",C.l0],["1",C.l1]])}${paperTex(u+"n",L,L?.14:.09)}<radialGradient id="${u}o"><stop offset="0" stop-color="#F3E9C8" stop-opacity=".45"/><stop offset="1" stop-color="#F3E9C8" stop-opacity="0"/></radialGradient></defs>`;
+    b+=`<rect width="1420" height="1000" fill="url(#${u}s)"/>`;
+    if(!L){ b+=stars(r,70,0,1420,0,420,.6,1.6,"#F3EBD2"); b+=`<circle cx="262" cy="210" r="130" fill="url(#${u}o)"/><circle cx="262" cy="210" r="50" fill="#F3E9C8"/>`; }
+    const cloud=(x,y,w)=>`<g><ellipse cx="${x}" cy="${y}" rx="${w*.5}" ry="${w*.12}" fill="${C.cloudSh}"/><ellipse cx="${x-w*.18}" cy="${y-w*.08}" rx="${w*.2}" ry="${w*.14}" fill="${C.cloud}"/><ellipse cx="${x+w*.06}" cy="${y-w*.13}" rx="${w*.22}" ry="${w*.18}" fill="${C.cloud}"/><ellipse cx="${x+w*.28}" cy="${y-w*.05}" rx="${w*.16}" ry="${w*.11}" fill="${C.cloud}"/><rect x="${x-w*.42}" y="${y-w*.06}" width="${w*.84}" height="${w*.08}" rx="${w*.04}" fill="${C.cloud}"/></g>`;
+    if(L){ b+=cloud(330,215,300)+cloud(1050,160,260)+cloud(760,300,180); }
+    else { b+=`<rect x="120" y="236" width="420" height="16" rx="8" fill="${C.cloud}" opacity=".85"/><rect x="230" y="262" width="300" height="10" rx="5" fill="${C.cloud}" opacity=".7"/><rect x="880" y="180" width="360" height="14" rx="7" fill="${C.cloud}" opacity=".6"/>`; }
+    b+=`<path d="${ridge([[-20,600],[100,540],[220,470],[300,500],[420,430],[520,500],[640,470],[760,520],[880,440],[1000,500],[1120,460],[1260,520],[1440,480]],true)}" fill="${C.far}"/>`;
+    b+=`<path d="${ridge([[-20,640],[90,612],[200,594],[320,620],[450,602],[580,630],[720,610],[860,640],[1000,615],[1150,640],[1300,620],[1440,640]],true)}" fill="${C.mid}"/>`;
+    const pine=(x,base,h)=>{const w=h*.42;return `<path d="M${f1(x)} ${f1(base-h)}L${f1(x+w*.55)} ${f1(base-h*.45)}H${f1(x+w*.25)}L${f1(x+w)} ${f1(base)}H${f1(x-w)}L${f1(x-w*.25)} ${f1(base-h*.45)}H${f1(x-w*.55)}Z" fill="${C.pine}"/>`;};
+    for(let x=400;x<720;x+=18+r()*16) b+=pine(x, 646, 40+r()*46);
+    for(let x=980;x<1260;x+=18+r()*16) b+=pine(x, 646, 34+r()*40);
+    b+=`<rect x="0" y="640" width="1420" height="360" fill="url(#${u}w)"/>`;
+    for(let i=0;i<9;i++){const y=670+i*36+r()*10;b+=`<path d="M${f1(r()*300)} ${f1(y)}H${f1(600+r()*800)}" stroke="${L?"#FFFFFF":"#3C528A"}" stroke-width="2" opacity="${L?.35:.6}"/>`;}
+    if(!L){ for(let i=0;i<15;i++){const w=72-i*3.6+r()*12;b+=`<rect x="${f1(262+(r()-.5)*10-w/2)}" y="${f1(664+i*20)}" width="${f1(w)}" height="3.4" rx="1.7" fill="${C.ref}" opacity="${(.88-i*.045).toFixed(2)}"/>`;} }
+    else { for(let i=0;i<10;i++){const x=200+r()*1100,y=700+r()*260,w=30+r()*70;b+=`<rect x="${f1(x)}" y="${f1(y)}" width="${f1(w)}" height="3" rx="1.5" fill="#FFFFFF" opacity=".6"/>`;} }
+    b+=`<path d="M-10 1000V812Q120 784 250 798Q350 808 420 846Q470 880 500 1000Z" fill="${C.bank}"/>`;
+    for(let i=0;i<12;i++){const x=380+i*9+r()*6;b+=`<path d="M${f1(x)} ${f1(870+r()*20)}q${f1(4+r()*6)} -${f1(40+r()*40)} ${f1(10+r()*10)} -${f1(70+r()*40)}" fill="none" stroke="${C.reed}" stroke-width="2.4" stroke-linecap="round"/>`;}
+    b+=shiba(136, 798, 118, L?COATS[coat].back:SHIBA_FIXED.moon);
+    b+=`<rect width="1420" height="1000" filter="url(#${u}n)"/>`;
+    return {vb: fmt==="cover"?"0 0 687 1000":SPREAD, body:b};
   },
   night(mode, fmt){
     const u=uid("nf"), L=mode==="light", r=mulberry32(5);
@@ -704,13 +986,13 @@ const WALL = {
     const blob=L?mix(tint,"#ffffff",.5):tint;
     [[300,300,260],[1150,780,300],[920,150,170],[520,880,180]].forEach(([x,y,rad])=>b+=`<circle cx="${x}" cy="${y}" r="${rad}" fill="${blob}" opacity="${L?.55:.26}" filter="url(#${u}b)"/>`);
     const rib="M-60 760C300 560 520 920 860 700S1300 420 1480 560";
-    b+=`<path d="${rib}" fill="none" stroke="${L?mix(tint,"#ffffff",.3):tint}" stroke-width="30" opacity="${L?.4:.4}" filter="url(#${u}r)"/><path d="${rib}" fill="none" stroke="#ffffff" stroke-width="2" opacity="${L?.85:.55}"/>`;
+    b+=`<path d="${rib}" fill="none" stroke="${L?mix(tint,"#ffffff",.3):tint}" stroke-width="30" opacity=".4" filter="url(#${u}r)"/><path d="${rib}" fill="none" stroke="#ffffff" stroke-width="2" opacity="${L?.85:.55}"/>`;
     for(let i=0;i<22;i++){const x=r()*1420,y=r()*1000,s=5+r()*12;b+=`<path d="M${f1(x)} ${f1(y-s)}Q${f1(x)} ${f1(y)} ${f1(x+s)} ${f1(y)}Q${f1(x)} ${f1(y)} ${f1(x)} ${f1(y+s)}Q${f1(x)} ${f1(y)} ${f1(x-s)} ${f1(y)}Q${f1(x)} ${f1(y)} ${f1(x)} ${f1(y-s)}Z" fill="${L?"#ffffff":mix(tint,"#ffffff",.5)}" opacity="${(.5+r()*.5).toFixed(2)}"/>`;}
     return {vb: fmt==="cover"?"366 0 687 1000":SPREAD, body:b};
   }
 };
-function wallSVG(id, mode, fmt, tint){
-  const w = WALL[id](mode, fmt, tint);
+function wallSVG(id, mode, fmt, t){
+  const w = WALL[id](mode, fmt, t);
   return `<svg viewBox="${w.vb}" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${w.body}</svg>`;
 }
 
@@ -718,8 +1000,10 @@ function wallSVG(id, mode, fmt, tint){
 const HOURS=[["10時","sun",19],["11時","sun",20],["12時","partly",21],["13時","partly",22],["14時","cloud",21],["15時","cloud",20]];
 const DAYS=[["月","partly",14,21],["火","rain",12,17],["水","sun",11,20],["木","sun",13,22],["金","cloud",14,19],["土","partly",12,20]];
 const EVENTS=[["10:00","美容院","表参道","#E5786D"],["13:30","ランチ","代官山","#6FA8DC"],["16:00","ケースを受け取る","駅前","#93C47D"],["19:00","映画（レイトショー）","新宿","#B48EDB"]];
+const BUNKO_NOTE={title:"十一月一日（日）",lines:[["","見開きの左に予定、右にこのメモ。"],["","閉じれば文庫本、開けば手帳。"],["n","読みかけ"],["","随筆集　p.142 から"],["n","買うもの"],["","□ ブックカバー（生成り）"],["","□ 栞をもう一本"],["","□ 万年筆のインク（藍）"],["n","メモ"],["","雨の日は散歩の代わりに喫茶店。"]]};
 const W = {
   weather(s){
+    if(s==="S") return `<div class="w-b">東京</div><div class="w-big">19°</div><i class="w-ico lg" style="margin-top:auto">${g("sun")}</i><div class="w-cap">晴れ · 22° / 13°</div>`;
     const head=`<div class="row between"><div><div class="w-b">東京</div><div class="w-big">19°</div></div><div class="w-right"><i class="w-ico lg">${g("sun")}</i><div>晴れ</div><div class="w-cap">最高22° 最低13°</div></div></div>`;
     const hours=`<div class="hours">${HOURS.slice(0,s==="M"?5:6).map(([t,ic,v])=>`<div><span>${t}</span><i class="w-ico">${g(ic)}</i><span>${v}°</span></div>`).join("")}</div>`;
     if(s==="M") return head+hours;
@@ -727,17 +1011,19 @@ const W = {
     return head+hours+days;
   },
   calendar(s, o){
-    const ev=(o&&o.events)||EVENTS;
-    if(s==="S") return `<div class="w-cap w-acc w-b">日曜日</div><div class="w-huge">1</div><div class="w-mini"><b>${ev[0][0]}</b> ${ev[0][1]}</div><div class="w-cap">${ev.length>1?`ほか${ev.length-1}件の予定`:ev[0][2]}</div>`;
-    const list=a=>`<div class="evs">${a.map(([t,n,p,c])=>`<div class="ev" style="--ev:${c}"><i></i><div><b>${n}</b><span>${t} · ${p}</span></div></div>`).join("")}</div>`;
-    return `<div><div class="w-cap w-acc w-b">日曜日</div><div class="w-big">11月1日</div></div>${list(ev)}<div class="w-cap" style="margin-top:auto">明日</div>${list([["9:00","定例ミーティング","オンライン","#6FA8DC"]])}`;
+    o=o||{};
+    const ev=o.events||EVENTS, dow=o.dow||"日曜日", d=o.d||"1";
+    if(s==="S") return `<div class="w-cap w-acc w-b">${dow}</div><div class="w-huge">${d}</div><div class="w-mini"><b>${ev[0][0]}</b> ${ev[0][1]}</div><div class="w-cap">${ev.length>1?`ほか${ev.length-1}件の予定`:ev[0][2]}</div>`;
+    const list=a=>`<div class="evs">${a.map(([t,n,p,c])=>`<div class="ev" style="--ev:${c}"><i></i><div><b>${n}</b><span>${t}${p?` · ${p}`:""}</span></div></div>`).join("")}</div>`;
+    const tm=o.tomorrow||[["9:00","定例ミーティング","オンライン","#6FA8DC"]];
+    return `<div><div class="w-cap w-acc w-b">${dow}</div><div class="w-big">11月${d}日</div></div>${list(ev)}<div class="w-cap" style="margin-top:auto">明日</div>${list(tm)}`;
   },
   clock(){
     let ticks="";for(let i=0;i<12;i++){const a=i*30*Math.PI/180,r1=i%3?40:36,r2=44;ticks+=`<line x1="${f1(50+Math.sin(a)*r1)}" y1="${f1(50-Math.cos(a)*r1)}" x2="${f1(50+Math.sin(a)*r2)}" y2="${f1(50-Math.cos(a)*r2)}" stroke="currentColor" stroke-width="${i%3?1.4:2.6}" stroke-linecap="round" opacity="${i%3?.5:.9}"/>`;}
     const hand=(deg,len,w,col)=>{const a=deg*Math.PI/180;return `<line x1="50" y1="50" x2="${f1(50+Math.sin(a)*len)}" y2="${f1(50-Math.cos(a)*len)}" stroke="${col}" stroke-width="${w}" stroke-linecap="round"/>`;};
     return `<svg viewBox="0 0 100 100" aria-hidden="true" style="color:var(--w-fg)">${ticks}${hand(304.5,24,4,"currentColor")}${hand(54,35,2.6,"currentColor")}${hand(180,38,1.2,"var(--w-accent)")}<circle cx="50" cy="50" r="2.6" fill="var(--w-accent)"/></svg>`;
   },
-  vdate(){ return `<div class="vd"><span class="m">十一月</span><span class="d">一日</span><span class="w">日曜</span></div>`; },
+  vdate(o){ o=o||{}; return `<div class="vd"><span class="m">${o.m||"十一月"}</span><span class="d">${o.d||"一日"}</span><span class="w">${o.w||"日曜"}</span></div>`; },
   music(){
     return `<div class="row between"><span class="w-cap w-b w-acc">ミュージック</span><span class="w-cap">最近再生した項目</span></div><div class="covers">${[["Night Drive","a1"],["シティポップ名盤","a2"],["作業用 Lo-fi","a3"]].map(([t,k])=>`<div class="cv"><span class="art ${k}"></span><span>${t}</span></div>`).join("")}</div>`;
   },
@@ -747,15 +1033,31 @@ const W = {
   shortcuts(){
     return `<div class="scs">${[["home","帰宅する","#E08A1E"],["moon","おやすみ","#5753C9"],["focus","集中モード","#1F8FA6"],["music","音楽をかける","#D63A5E"]].map(([ic,t,c])=>`<div class="sc" style="--sc:${c}"><i class="w-ico">${g(ic)}</i><span>${t}</span></div>`).join("")}</div>`;
   },
-  notes(){
-    return `<div class="row between"><span class="w-cap w-b w-acc">メモ</span><span class="w-cap">クイックメモ</span></div><div class="n-title">十一月一日（日）</div><div class="n-body"><p>見開きの左に予定、右にこのメモ。</p><p>閉じれば文庫本、開けば手帳。</p><p class="n-sub">読みかけ</p><p>随筆集　p.142 から</p><p class="n-sub">買うもの</p><p>□ ブックカバー（生成り）</p><p>□ 栞をもう一本</p><p>□ 万年筆のインク（藍）</p><p class="n-sub">メモ</p><p>雨の日は散歩の代わりに喫茶店。</p></div>`;
+  notes(s, o){
+    o=o||BUNKO_NOTE;
+    return `<div class="row between"><span class="w-cap w-b w-acc">メモ</span><span class="w-cap">クイックメモ</span></div><div class="n-title">${o.title}</div><div class="n-body">${o.lines.map(([k,t])=>`<p${k?' class="n-sub"':""}>${t}</p>`).join("")}</div>`;
   }
 };
 const SPAN={S:[2,2],M:[4,2],L:[4,4],XL:[4,6]};
 
 /* ---------- concepts ---------- */
-const A=(a,c,r)=>({a,c,r}), Wd=(w,s,c,r,o)=>({w,s,c,r,o});
+const A=(a,c,r)=>({a,c,r}), Wd=(w,s,c,r,o)=>({w,s,c,r,o}), S=(n,c,r)=>({slot:n,c,r});
+/* round 2: right thumb zone, filled from the bottom-right */
+const R2_SLOTS=[S(5,4,5),S(6,3,5),S(7,4,4),S(8,3,4),S(9,4,3),S(10,3,3)];
+const SLOT_APPS={1:"message",2:"browser",3:"camera",4:"photos",5:"maps",6:"mail",7:"music",8:"calendar",9:"notes",10:"settings"};
+const R2_EVENTS=[["7:00","柴の散歩","川沿い","#E2A04A"],["10:00","在宅ワーク","","#6FA8DC"],["17:00","夕方の散歩","公園","#E2A04A"],["19:30","ごはん・ブラッシング","","#93C47D"]];
+const P2SETS={
+  photo:()=>[Wd("photo","XL",1,1,{art:"shibaFace",chip:"柴アルバム（あなたの写真に）"})],
+  notes:()=>[Wd("notes","XL",1,1,{title:"十一月二日（月）",lines:[["n","散歩"],["","朝 7:00　川沿い → 公園（40分）"],["","夕方 17:00　いつもの坂道"],["n","柴メモ"],["","ごはん 7:30 / 18:30"],["","爪切りは今週末に"],["n","週末"],["","紅葉を見に山へ。柴も一緒に"],["","おやつ（さつまいも）を買う"]]})],
+  calendar:()=>[Wd("calendar","XL",1,1,{dow:"月曜日",d:"2",events:R2_EVENTS,tomorrow:[["7:00","柴の散歩","川沿い","#E2A04A"],["15:00","トリミング","","#B48EDB"]]})]
+};
 const CONCEPTS = {
+  hoshimi:{ name:"星見の柴", icons:"clear", frame:"night", mode:"dark", p2:"photo", view:"apps", thumb:"off",
+    pages:[[Wd("weather","S",3,1),...R2_SLOTS]], dock:[1,2,3,4] },
+  biyori:{ name:"柴日和", icons:"tinted", frame:"night", mode:"dark", p2:"photo", view:"apps", thumb:"off",
+    pages:[[Wd("vdate","S",3,1,{m:"十一月",d:"二日",w:"月曜"}),...R2_SLOTS]], dock:[1,2,3,4] },
+  hanga:{ name:"月夜の版画", icons:"tinted", frame:"night", mode:"dark", p2:"photo", view:"apps", thumb:"off",
+    pages:[[Wd("calendar","S",3,1,{dow:"月曜日",d:"2",events:R2_EVENTS}),...R2_SLOTS]], dock:[1,2,3,4] },
   dune:{ name:"砂丘時計", icons:"clear", frame:"star", mode:"light",
     pages:[[Wd("weather","M",1,1),A("photos",1,3),A("calendar",2,3),A("maps",3,3),A("mail",4,3),A("notes",3,4),A("settings",4,4)],
            [Wd("calendar","L",1,1),A("music",1,5),A("podcasts",2,5),A("books",3,5),A("files",4,5)]],
@@ -777,6 +1079,7 @@ const CONCEPTS = {
            [Wd("photo","XL",1,1,{art:"stage",chip:"思い出 · 2026年10月"})]],
     dock:["phone","message","browser","mail"] }
 };
+const ROUND2=["hoshimi","biyori","hanga"];
 const OSHI_COLORS=[["赤","#E0475A"],["オレンジ","#EE8434"],["黄","#E0AC22"],["緑","#2FA36B"],["水色","#38AEDB"],["青","#3D6FE0"],["紫","#8A5CD6"],["ピンク","#E8709F"]];
 let tint = "#8A5CD6";
 try{ const t=localStorage.getItem("duo-oshi-tint"); if(t && OSHI_COLORS.some(c=>c[1]===t)) tint=t; }catch(e){}
@@ -785,62 +1088,100 @@ function appHTML(key, k){
   const [jp,gl,col]=APPS[key];
   return `<span class="tile k${k%3}" style="--app:${col}">${g(gl)}</span><span class="lbl">${jp}</span>`;
 }
-function itemHTML(it, k){
+function slotHTML(n, k, c){
+  if(c.view==="slots") return `<span class="tile slot k${k%3}"><b>${n}</b></span><span class="lbl">${n<=4?"Dock":n+"番目"}</span>`;
+  return appHTML(SLOT_APPS[n], k);
+}
+function itemHTML(it, k, c){
+  if(it.slot!==undefined) return `<div class="app" style="grid-column:${it.c};grid-row:${it.r}">${slotHTML(it.slot,k,c)}</div>`;
   if(it.a) return `<div class="app" style="grid-column:${it.c};grid-row:${it.r}">${appHTML(it.a,k)}</div>`;
   const [w,h]=SPAN[it.s];
   const pos=`grid-column:${it.c} / span ${w};grid-row:${it.r} / span ${h}`;
   if(it.w==="photo") return `<div class="wdg photo" style="${pos}">${ART[it.o.art](tint)}${it.o.chip?`<span class="chip">${it.o.chip}</span>`:""}</div>`;
   if(it.w==="clock") return `<div class="wdg clock" style="${pos}">${W.clock()}</div>`;
-  if(it.w==="vdate") return `<div class="wdg vdate" style="${pos}">${W.vdate()}</div>`;
+  if(it.w==="vdate") return `<div class="wdg vdate" style="${pos}">${W.vdate(it.o)}</div>`;
   return `<div class="wdg w-${it.w}" style="${pos}">${W[it.w](it.s,it.o)}</div>`;
 }
-function pageHTML(c, i){ return `<div class="grid">${c.pages[i].map((it,k)=>itemHTML(it,k+i)).join("")}</div>`; }
-function dockHTML(c){ return `<div class="dock">${c.dock.map((a,k)=>`<div class="app">${appHTML(a,k+1)}</div>`).join("")}</div>`; }
+function pageHTML(c, items, offset){ return `<div class="grid">${items.map((it,k)=>itemHTML(it,k+offset,c)).join("")}</div>`; }
+function dockHTML(c){ return `<div class="dock">${c.dock.map((a,k)=>`<div class="app">${typeof a==="number"?slotHTML(a,k+1,c):appHTML(a,k+1)}</div>`).join("")}</div>`; }
 const STATUS = `<div class="status">9:41</div>`;
 
 function render(id){
-  const c=CONCEPTS[id], sec=document.getElementById(id), stage=sec.querySelector(".stage");
-  const p1=pageHTML(c,0), p2=pageHTML(c,1);
+  const c=CONCEPTS[id], sec=document.getElementById(id); if(!sec) return;
+  const stage=sec.querySelector(".stage");
+  const p2items=c.p2?P2SETS[c.p2]():c.pages[1];
+  const p1=pageHTML(c,c.pages[0],0), p2=pageHTML(c,p2items,1);
   const attrs=`class="duo device ${c.frame}" data-c="${id}" data-mode="${c.mode}" data-icons="${c.icons}"${id==="oshi"?` style="--tint:${tint}"`:""}`;
-  const modeJP=(id==="night"?(c.mode==="dark"?"夜":"夜明け"):(c.mode==="dark"?"夜":"昼"));
+  const modeJP=c.mode==="dark"?"夜":(id==="night"?"夜明け":"昼");
+  const thumb=c.thumb==="on"?`<div class="thumbmap"></div>`:"";
   stage.innerHTML=
    `<figure class="f-cover"><div ${attrs}><div class="screen" role="img" aria-label="${c.name}（${modeJP}）：閉じた状態の外側画面。P1とDock">`+
-   `<div class="wall">${wallSVG(id,c.mode,"cover",tint)}</div><div class="page">${p1}${dockHTML(c)}${STATUS}<div class="dots"><i class="on"></i><i></i></div></div></div></div>`+
+   `<div class="wall">${wallSVG(id,c.mode,"cover",tint)}</div><div class="page">${p1}${dockHTML(c)}${STATUS}<div class="dots"><i class="on"></i><i></i></div></div>${thumb}</div></div>`+
    `<figcaption><b>外側 5.4型・閉じた状態</b><span>P1</span></figcaption></figure>`+
    `<figure class="f-spread"><div ${attrs}><div class="screen" role="img" aria-label="${c.name}（${modeJP}）：開いた状態の内側画面。左にP1、右にP2とDock">`+
    `<div class="wall">${wallSVG(id,c.mode,"spread",tint)}</div><div class="page p1">${p1}</div><div class="page p2">${p2}${dockHTML(c)}${STATUS}</div><div class="crease"></div></div></div>`+
    `<figcaption><b>内側 7.6型・開いた状態</b><span>P1 ＋ P2</span></figcaption></figure>`;
+  const lg=sec.querySelector(".legend"); if(lg) lg.hidden=c.thumb!=="on";
 }
 
 Object.keys(CONCEPTS).forEach(id=>{
-  const sec=document.getElementById(id);
-  sec.querySelectorAll(".seg button").forEach(btn=>{
-    btn.addEventListener("click",()=>{
-      CONCEPTS[id].mode=btn.dataset.mode;
-      sec.querySelectorAll(".seg button").forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));
-      render(id);
+  const sec=document.getElementById(id); if(!sec) return;
+  const c=CONCEPTS[id];
+  sec.querySelectorAll(".seg[data-ctl]").forEach(seg=>{
+    const key=seg.dataset.ctl, btns=seg.querySelectorAll("button");
+    btns.forEach(btn=>{
+      btn.setAttribute("aria-pressed",String(btn.dataset.v===c[key]));
+      btn.addEventListener("click",()=>{
+        c[key]=btn.dataset.v;
+        btns.forEach(b=>b.setAttribute("aria-pressed",String(b===btn)));
+        render(id);
+      });
     });
   });
   render(id);
 });
 
+// Shiba coat colour (round 2)
+const coatSeg=document.querySelector("[data-coat]");
+if(coatSeg){
+  const btns=coatSeg.querySelectorAll("button");
+  btns.forEach(b=>{
+    b.setAttribute("aria-pressed",String(b.dataset.v===coat));
+    b.addEventListener("click",()=>{
+      coat=b.dataset.v;
+      btns.forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+      try{ localStorage.setItem("duo-coat",coat); }catch(e){}
+      ROUND2.forEach(render);
+    });
+  });
+}
+
 // oshi colour swatches
 const swWrap=document.querySelector("#oshi .swatches");
-swWrap.innerHTML=OSHI_COLORS.map(([n,c])=>`<button type="button" style="--sw:${c}" data-c="${c}" aria-pressed="${c===tint}">${n}</button>`).join("");
-swWrap.addEventListener("click",e=>{
-  const b=e.target.closest("button"); if(!b) return;
-  tint=b.dataset.c;
-  swWrap.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
-  try{ localStorage.setItem("duo-oshi-tint",tint); }catch(err){}
-  render("oshi");
+if(swWrap){
+  swWrap.innerHTML=OSHI_COLORS.map(([n,c])=>`<button type="button" style="--sw:${c}" data-c="${c}" aria-pressed="${c===tint}">${n}</button>`).join("");
+  swWrap.addEventListener("click",e=>{
+    const b=e.target.closest("button"); if(!b) return;
+    tint=b.dataset.c;
+    swWrap.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+    try{ localStorage.setItem("duo-oshi-tint",tint); }catch(err){}
+    render("oshi");
+  });
+}
+
+// setup checklist
+let checks={}; try{ checks=JSON.parse(localStorage.getItem("duo-setup")||"{}")||{}; }catch(e){ checks={}; }
+document.querySelectorAll("#setup input[type=checkbox]").forEach(cb=>{
+  cb.checked=!!checks[cb.id];
+  cb.addEventListener("change",()=>{ checks[cb.id]=cb.checked; try{ localStorage.setItem("duo-setup",JSON.stringify(checks)); }catch(e){} });
 });
 
 // answer template
-const TEMPLATE=["【iPhone Duo ホーム画面・回答】","1. 好きな案（混ぜたい要素も）：","2. 利き手 ／ ケースの有無：","3. 本体の色（スターホワイト ／ ナイトスカイ）：","4. 毎日使うアプリ（8つまで）：","5. 壁紙にしたい写真・モチーフ・好きな色：","6. 開いたときに一番することは："].join("\n");
+const TEMPLATE=["【第2稿への回答】","1. 選んだ案（A′ 星見の柴／B′ 柴日和／A×B 月夜の版画、混ぜても）：","2. 柴犬（飼っている子の毛色・写真を使うか）：","3. 使う順のアプリ（①〜⑩、決まったら）：","4. 開いた右ページ（柴の写真／メモ／予定／未定）："].join("\n");
 const ta=document.getElementById("answer-template"), status=document.getElementById("copy-status");
-let saved=null; try{ saved=localStorage.getItem("duo-answer"); }catch(e){}
+let saved=null; try{ saved=localStorage.getItem("duo-answer-2"); }catch(e){}
 ta.value=saved||TEMPLATE;
-ta.addEventListener("input",()=>{ try{ localStorage.setItem("duo-answer",ta.value); }catch(e){} });
+ta.addEventListener("input",()=>{ try{ localStorage.setItem("duo-answer-2",ta.value); }catch(e){} });
 document.getElementById("copy-btn").addEventListener("click",()=>{
   const done=()=>{ status.textContent="コピーしました。チャットに貼ってください。"; };
   const fallback=()=>{ ta.focus(); ta.select(); status.textContent="選択しました。⌘C（Ctrl+C）でコピーしてください。"; };
@@ -848,10 +1189,10 @@ document.getElementById("copy-btn").addEventListener("click",()=>{
 });
 document.getElementById("reset-btn").addEventListener("click",()=>{
   ta.value=TEMPLATE; status.textContent="書き込みを消しました。";
-  try{ localStorage.removeItem("duo-answer"); }catch(e){}
+  try{ localStorage.removeItem("duo-answer-2"); }catch(e){}
 });
 
-// expose wallpaper renderer for exporting full-size images
-window.__duoWallpaper=(id,mode,fmt,t)=>wallSVG(id,mode,fmt,t||tint);
+// for exporting full-size wallpapers
+window.__duoWallpaper=(id,mode,fmt,opt)=>{ if(opt&&opt.coat) coat=opt.coat; return wallSVG(id,mode,fmt,(opt&&opt.tint)||tint); };
 })();
 </script>
