@@ -152,7 +152,7 @@ p{margin:0}
 .f-cover .device{border-radius:9% / 6.2%}
 .f-spread .device{border-radius:4.4% / 6.2%}
 .device.star{--frame:linear-gradient(140deg,#F7F6F2 0%,#D3D0C9 34%,#FBFAF7 55%,#BFBBB3 100%)}
-.device.night{--frame:linear-gradient(140deg,#4C5574 0%,#1E2336 38%,#58628A 58%,#161A28 100%)}
+.device.night{--frame:linear-gradient(140deg,#4D505A 0%,#202228 38%,#5A5E6A 58%,#18191D 100%)}
 .screen{position:relative;overflow:hidden;border-radius:inherit;background:#000;border:3px solid #07080A;isolation:isolate;aspect-ratio:1398/2034}
 .f-spread .screen{aspect-ratio:2670/1878}
 .wall{position:absolute;inset:0}
@@ -305,9 +305,9 @@ p{margin:0}
 
 
 /* Round 3: photo showroom */
-.showroom{--bg:#0D0F13;--surface:#171A21;--stage:#14171D;--ink:#ECEEF2;--muted:#A3AAB5;--line:#2A2F38;--accent:#C7D2F7;--sand:#E2BC8C;--warn:#F0B26B;color-scheme:dark;background:var(--bg);color:var(--ink);border-radius:28px;padding:clamp(20px,4vw,52px)}
-.showroom .stage{background:radial-gradient(120% 90% at 50% 0%,#1C2029 0%,#111318 70%)}
-.showroom .concept + .concept{border-top-color:#2A2F38}
+.showroom{--bg:#0F0F10;--surface:#19191B;--stage:#151516;--ink:#EDEDED;--muted:#A8A8A8;--line:#2C2C2F;--accent:#DCCBA6;--sand:#E2BC8C;--warn:#F0B26B;color-scheme:dark;background:var(--bg);color:var(--ink);border-radius:28px;padding:clamp(20px,4vw,52px)}
+.showroom .stage{background:radial-gradient(120% 90% at 50% 0%,#202022 0%,#121213 70%)}
+.showroom .concept + .concept{border-top-color:#2C2C2F}
 .showroom .recipe dd a{color:var(--accent)}
 .showroom .setup{margin-top:56px}
 .older{border:1px solid var(--line);border-radius:18px;background:var(--surface)}
@@ -386,12 +386,12 @@ p{margin:0}
   <div class="sec-head">
     <p class="eyebrow">Round 4 · 11月2日</p>
     <h2>第4稿：見やすい幾何学模様</h2>
-    <p>写真をやめて、背景を控えめな幾何学模様にしました。模様の線は背景とほとんど同じ明るさにしてあるので、アイコンと文字がはっきり読めます。模様と色を選んで比べてください。</p>
+    <p>写真をやめて、背景を控えめな幾何学模様にしました。模様の線は背景とほとんど同じ明るさにしてあるので、アイコンと文字がはっきり読めます。色は青を使わず、墨・鉄・焦茶・砂・苔・葡萄の6色から選べます。明るすぎる色は白い文字が読みにくくなるので、中間から暗めの色にしています。</p>
   </div>
   <article class="concept" id="r4">
     <div class="geo-gallery" role="group" aria-label="模様を選ぶ"></div>
     <div class="c-controls">
-      <span class="ctl"><span class="ctl-label" id="r4-pal">色</span><span class="seg" role="group" aria-labelledby="r4-pal" data-geo="pal"><button type="button" data-v="yoru"><i class="pal-dot" style="background:linear-gradient(#171D31,#0E1220)"></i>夜</button><button type="button" data-v="ai"><i class="pal-dot" style="background:linear-gradient(#203059,#162241)"></i>藍</button><button type="button" data-v="sumi"><i class="pal-dot" style="background:linear-gradient(#1D1E22,#121316)"></i>墨</button><button type="button" data-v="ainezu"><i class="pal-dot" style="background:linear-gradient(#5E6B80,#4A5569)"></i>藍鼠</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r4-pal">色</span><span class="seg" role="group" aria-labelledby="r4-pal" data-geo="pal"></span></span>
       <span class="ctl"><span class="ctl-label" id="r4-icons">アイコン</span><span class="seg" role="group" aria-labelledby="r4-icons" data-ctl="icons"><button type="button" data-v="clear">クリア</button><button type="button" data-v="white">白</button></span></span>
       <span class="ctl"><span class="ctl-label" id="r4-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="r4-p2" data-ctl="p2"><button type="button" data-v="none">壁紙だけ</button><button type="button" data-v="calendar">予定</button><button type="button" data-v="photo">柴の写真</button></span></span>
       <span class="ctl"><span class="ctl-label" id="r4-view">配置</span><span class="seg" role="group" aria-labelledby="r4-view" data-ctl="view"><button type="button" data-v="apps">アプリ例</button><button type="button" data-v="slots">使う順</button></span></span>
@@ -412,7 +412,7 @@ p{margin:0}
       <li><label><input type="checkbox" id="ck-tidy"><span><b>残りのアプリはホーム画面から外す</b><small>アイコンを長押し →「Appを削除」→「ホーム画面から取り除く」。アプリ自体は消えず、アプリライブラリに残ります。</small></span></label></li>
       <li><label><input type="checkbox" id="ck-mute"><span><b>消音モードをコントロールセンターに</b><small>コントロールセンター左上の「＋」→「コントロールを追加」→「消音モード」。</small></span></label></li>
     </ul>
-    <p class="files-note">壁紙（外側 <span class="num">1398×2034</span>、内側 <span class="num">2670×1878</span>）は、6つの模様の「夜」をリポジトリの <span class="num">wallpapers</span> フォルダに入れてあります。ほかの色がよければ、その組み合わせで作って送ります。</p>
+    <p class="files-note">壁紙（外側 <span class="num">1398×2034</span>、内側 <span class="num">2670×1878</span>）は、6つの模様の「墨」をリポジトリの <span class="num">wallpapers</span> フォルダに入れてあります。ほかの色がよければ、その組み合わせで作って送ります。</p>
   </div>
  </div>
 </section>
@@ -747,7 +747,7 @@ p{margin:0}
   <div class="together">
     <ol class="questions">
       <li><b>気に入った模様</b><span>青海波・麻の葉・七宝・亀甲・市松・同心円のどれか。</span></li>
-      <li><b>色</b><span>夜・藍・墨・藍鼠のどれか。</span></li>
+      <li><b>色</b><span>墨・鉄・焦茶・砂・苔・葡萄のどれか。</span></li>
       <li><b>アイコン</b><span>クリア（ガラス）か、白か。</span></li>
       <li><b>開いた右ページ</b><span>壁紙だけ・予定・柴の写真のどれか。</span></li>
       <li><b>使う順のアプリ</b><span>決まったら①〜⑩の順で。①〜④がDockに入ります。</span></li>
@@ -1290,10 +1290,12 @@ function render(id){
 
 /* ---------- round 4: geometric wallpapers ---------- */
 const PALS={
-  yoru:{name:"夜",bg0:"#171D31",bg1:"#0E1220",line:"#29334F"},
-  ai:{name:"藍",bg0:"#203059",bg1:"#162241",line:"#33477F"},
-  sumi:{name:"墨",bg0:"#1D1E22",bg1:"#121316",line:"#2F3137"},
-  ainezu:{name:"藍鼠",bg0:"#5E6B80",bg1:"#4A5569",line:"#6E7B91"}
+  sumi:{name:"墨",bg0:"#1F2023",bg1:"#141518",line:"#303237"},
+  tetsu:{name:"鉄",bg0:"#3A3B3E",bg1:"#2A2B2E",line:"#4B4C50"},
+  kogecha:{name:"焦茶",bg0:"#3B2F28",bg1:"#29201B",line:"#4E3F36"},
+  suna:{name:"砂",bg0:"#7D7062",bg1:"#6A5E51",line:"#8C7F70"},
+  koke:{name:"苔",bg0:"#2E3529",bg1:"#20261D",line:"#3E4738"},
+  budo:{name:"葡萄",bg0:"#3C2429",bg1:"#2A181C",line:"#503139"}
 };
 const GEO_INFO={
   seigaiha:["青海波","せいがいは","穏やかな波がどこまでも続く柄。平穏な暮らしへの願いが込められています。"],
@@ -1377,7 +1379,7 @@ function geoSVG(pid, palKey, fmt, opts){
   }
   return `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs>${defs}</defs>${body}</svg>`;
 }
-let geoState={pattern:"seigaiha", pal:"yoru"};
+let geoState={pattern:"seigaiha", pal:"sumi"};
 try{ const gs=JSON.parse(localStorage.getItem("duo-geo")||"null"); if(gs && GEO[gs.pattern] && PALS[gs.pal]) geoState=gs; }catch(e){}
 function saveGeo(){ try{ localStorage.setItem("duo-geo", JSON.stringify(geoState)); }catch(e){} }
 CONCEPTS.r4={ name:"幾何学模様", icons:"clear", frame:"night", mode:"dark", p2:"none", view:"apps", thumb:"off", geo:true, p2img:"img/r3-shiba-xl.jpg",
@@ -1416,6 +1418,8 @@ Object.keys(CONCEPTS).forEach(id=>{
 });
 
 // geometric pattern picker (round 4)
+const palSeg=document.querySelector("#r4 [data-geo=pal]");
+if(palSeg) palSeg.innerHTML=Object.entries(PALS).map(([k,v])=>`<button type="button" data-v="${k}"><i class="pal-dot" style="background:linear-gradient(${v.bg0},${v.bg1})"></i>${v.name}</button>`).join("");
 renderGeoUI();
 const galEl=document.querySelector("#r4 .geo-gallery");
 if(galEl) galEl.addEventListener("click",e=>{ const b=e.target.closest("button[data-pattern]"); if(b) pickGeo(b.dataset.pattern,null); });
@@ -1458,7 +1462,7 @@ document.querySelectorAll("#setup input[type=checkbox]").forEach(cb=>{
 });
 
 // answer template
-const TEMPLATE=["【第4稿への回答】","1. 気に入った模様（青海波／麻の葉／七宝／亀甲／市松／同心円）：","2. 色（夜／藍／墨／藍鼠）：","3. アイコン（クリア／白）：","4. 開いた右ページ（壁紙だけ／予定／柴の写真）：","5. 使う順のアプリ（①〜⑩、決まったら）："].join("\n");
+const TEMPLATE=["【第4稿への回答】","1. 気に入った模様（青海波／麻の葉／七宝／亀甲／市松／同心円）：","2. 色（墨／鉄／焦茶／砂／苔／葡萄）：","3. アイコン（クリア／白）：","4. 開いた右ページ（壁紙だけ／予定／柴の写真）：","5. 使う順のアプリ（①〜⑩、決まったら）："].join("\n");
 const ta=document.getElementById("answer-template"), status=document.getElementById("copy-status");
 let saved=null; try{ saved=localStorage.getItem("duo-answer-4"); }catch(e){}
 ta.value=saved||TEMPLATE;
