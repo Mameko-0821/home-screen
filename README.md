@@ -51,15 +51,7 @@ iPhone Duo は外側（5.4型・1398×2034）と内側（7.6型・1878×2670）�
 | 富士と紅葉 | 紅葉ごしの富士と湖 | 夕焼けの富士と湖（富士は左ページ） | 色合い調整（紺） |
 | 柴と秋 | 紅葉が舞う中の柴犬 | 紅葉の庭と池＋右ページに柴の写真 | クリア |
 
-### 壁紙（`wallpapers/`）
-
-外側用 `*_outer_1398x2034.jpg`、内側用 `*_inner_2670x1878.jpg`。
-
-- `hoshizora_*` … 星空
-- `fuji-momiji_*` … 富士と紅葉
-- `shiba-aki_*` … 柴と秋
-
-### 写真のクレジット（Unsplash License）
+### 第3稿の写真のクレジット（Unsplash License）
 
 - 星空：Robson Hatsukami Morgan — https://unsplash.com/photos/silhouette-of-mountains-under-milky-way-galaxy--wEFdRCG4IU
 - 紅葉と富士：Andreas Rasmussen — https://unsplash.com/photos/mount-fuji-and-autumn-maple-leaves-GhvpEtG5HMs
@@ -68,6 +60,20 @@ iPhone Duo は外側（5.4型・1398×2034）と内側（7.6型・1878×2670）�
 - 紅葉の庭：Lucas Calloch — https://unsplash.com/photos/red-and-green-trees-beside-river-during-daytime-P-yzuyWFEIk
 - 落ち葉と柴：Charlotte Rush — https://unsplash.com/photos/brown-and-white-short-coated-dog-on-brown-leaves-during-daytime-odJtBMxGEfk
 - 浜辺の柴：Marco Grosso — https://unsplash.com/photos/a-happy-shiba-inu-dog-sits-on-a-pebble-beach-En7pqRghArU
+
+## 第4稿（11月2日）：見やすい幾何学模様
+
+写真は背景がにぎやかでアイコンが見づらかったため、控えめな幾何学模様に切り替えた。
+模様の線は背景とほぼ同じ明るさにして、アイコンと文字を読みやすくしている。外側と内側で模様の大きさをそろえ、内側は折り目を中心に左右対称。
+
+- 模様：青海波・麻の葉・七宝・亀甲・市松・同心円
+- 色：夜（ナイトスカイ向けの紺）・藍・墨・藍鼠
+- アイコン：クリア、または白（色合い調整）
+
+### 壁紙（`wallpapers/`）
+
+6つの模様の「夜」。外側用 `*_outer_1398x2034.jpg`、内側用 `*_inner_2670x1878.jpg`。
+ほかの色は提案書のページで確認でき、希望の組み合わせで書き出せる。
 
 ## 調査メモ（デザインに効く事実）
 
