@@ -157,6 +157,8 @@ p{margin:0}
 .f-spread .screen{aspect-ratio:2670/1878}
 .wall{position:absolute;inset:0}
 .wall svg{display:block;width:100%;height:100%}
+.wall img{display:block;width:100%;height:100%;object-fit:cover}
+.wdg.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .crease{position:absolute;top:0;bottom:0;left:50%;width:1.8%;transform:translateX(-50%);background:linear-gradient(90deg,transparent,rgba(0,0,0,.10) 38%,rgba(255,255,255,.10) 58%,transparent);pointer-events:none;z-index:6}
 .page{position:absolute;top:0;bottom:0;left:0;width:100%;container-type:size;font-family:var(--m-font,var(--f-sys))}
 .f-spread .page.p1{width:50%}
@@ -991,6 +993,10 @@ const WALL = {
     return {vb: fmt==="cover"?"366 0 687 1000":SPREAD, body:b};
   }
 };
+function wallHTML(id, c, fmt){
+  if(c.photo){ const ph=c.photo[fmt]; return `<img src="${ph.src}" alt="" style="object-position:${ph.pos||"50% 50%"}" decoding="async">`; }
+  return wallSVG(id, c.mode, fmt, tint);
+}
 function wallSVG(id, mode, fmt, t){
   const w = WALL[id](mode, fmt, t);
   return `<svg viewBox="${w.vb}" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${w.body}</svg>`;
@@ -1097,7 +1103,7 @@ function itemHTML(it, k, c){
   if(it.a) return `<div class="app" style="grid-column:${it.c};grid-row:${it.r}">${appHTML(it.a,k)}</div>`;
   const [w,h]=SPAN[it.s];
   const pos=`grid-column:${it.c} / span ${w};grid-row:${it.r} / span ${h}`;
-  if(it.w==="photo") return `<div class="wdg photo" style="${pos}">${ART[it.o.art](tint)}${it.o.chip?`<span class="chip">${it.o.chip}</span>`:""}</div>`;
+  if(it.w==="photo") return `<div class="wdg photo" style="${pos}">${it.o.img?`<img src="${it.o.img}" alt="" style="object-position:${it.o.pos||"50% 50%"}" decoding="async">`:ART[it.o.art](tint)}${it.o.chip?`<span class="chip">${it.o.chip}</span>`:""}</div>`;
   if(it.w==="clock") return `<div class="wdg clock" style="${pos}">${W.clock()}</div>`;
   if(it.w==="vdate") return `<div class="wdg vdate" style="${pos}">${W.vdate(it.o)}</div>`;
   return `<div class="wdg w-${it.w}" style="${pos}">${W[it.w](it.s,it.o)}</div>`;
@@ -1116,10 +1122,10 @@ function render(id){
   const thumb=c.thumb==="on"?`<div class="thumbmap"></div>`:"";
   stage.innerHTML=
    `<figure class="f-cover"><div ${attrs}><div class="screen" role="img" aria-label="${c.name}（${modeJP}）：閉じた状態の外側画面。P1とDock">`+
-   `<div class="wall">${wallSVG(id,c.mode,"cover",tint)}</div><div class="page">${p1}${dockHTML(c)}${STATUS}<div class="dots"><i class="on"></i><i></i></div></div>${thumb}</div></div>`+
+   `<div class="wall">${wallHTML(id,c,"cover")}</div><div class="page">${p1}${dockHTML(c)}${STATUS}<div class="dots"><i class="on"></i><i></i></div></div>${thumb}</div></div>`+
    `<figcaption><b>外側 5.4型・閉じた状態</b><span>P1</span></figcaption></figure>`+
    `<figure class="f-spread"><div ${attrs}><div class="screen" role="img" aria-label="${c.name}（${modeJP}）：開いた状態の内側画面。左にP1、右にP2とDock">`+
-   `<div class="wall">${wallSVG(id,c.mode,"spread",tint)}</div><div class="page p1">${p1}</div><div class="page p2">${p2}${dockHTML(c)}${STATUS}</div><div class="crease"></div></div></div>`+
+   `<div class="wall">${wallHTML(id,c,"spread")}</div><div class="page p1">${p1}</div><div class="page p2">${p2}${dockHTML(c)}${STATUS}</div><div class="crease"></div></div></div>`+
    `<figcaption><b>内側 7.6型・開いた状態</b><span>P1 ＋ P2</span></figcaption></figure>`;
   const lg=sec.querySelector(".legend"); if(lg) lg.hidden=c.thumb!=="on";
 }
