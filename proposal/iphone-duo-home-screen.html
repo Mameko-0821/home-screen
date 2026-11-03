@@ -337,20 +337,38 @@ p{margin:0}
 .duo[data-icons="white"] .tile{background:linear-gradient(160deg,#FFFFFF,#E8EBF2);color:#1D2744;box-shadow:inset 0 0 0 .2cqw rgba(255,255,255,.7),0 .8cqw 2cqw rgba(0,0,0,.28)}
 .duo[data-c="r4"]{--label:#fff;--label-shadow:0 .2cqw .6cqw rgba(0,0,0,.55);--w-bg:rgba(255,255,255,.08);--w-line:rgba(255,255,255,.14);--w-fg:#EEF1F8;--w-muted:rgba(238,241,248,.68);--w-accent:#D9BE86;--w-blur:blur(12px) saturate(1.2);--dock-bg:rgba(255,255,255,.07);--dock-line:rgba(255,255,255,.12)}
 
+/* Round 5: two-image pairs */
+.pairs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:14px;margin:0 0 12px;padding:0;list-style:none}
+.pairs a{display:grid;gap:8px;align-content:start;padding:14px 14px 16px;border-radius:16px;background:var(--surface);border:1px solid var(--line);color:var(--ink);text-decoration:none;min-width:0;height:100%}
+.pairs a:hover{border-color:var(--accent)}
+.pair-imgs{display:grid;grid-template-columns:minmax(0,.483fr) auto minmax(0,1fr);align-items:center;gap:6px;margin-bottom:4px}
+.pair-imgs img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
+.pair-imgs .arr{font-size:.8125rem;color:var(--muted)}
+.pairs b{font-family:var(--f-display);font-size:1.125rem;line-height:1.4}
+.pairs .pair-sub{font-size:.8125rem;color:var(--muted);line-height:1.6}
+.recipe .dl-row{grid-column:1 / -1}
+.recipe dd.dl{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:6px}
+.seg button{white-space:nowrap}
+.ctl{flex-wrap:wrap}
+.dl a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none;font-size:.875rem}
+.dl a:hover{border-color:var(--accent)}
+.dl .num{color:var(--muted);font-size:.8125rem}
+.duo[data-c^="r5"]{--label:#fff;--label-shadow:0 .2cqw .7cqw rgba(0,0,0,.72);--glass-lo:rgba(255,255,255,.03);--w-bg:rgba(14,12,10,.44);--w-line:rgba(255,255,255,.14);--w-fg:#F3EEE6;--w-muted:rgba(243,238,230,.7);--w-accent:#E2C48E;--w-blur:blur(14px) saturate(1.2);--dock-bg:rgba(14,12,10,.32);--dock-line:rgba(255,255,255,.14)}
+
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 
 <main class="wrap">
 
-<p class="update"><b>11月2日 更新</b><span>アイコンが見やすい幾何学模様の第4稿を追加しました。前の案は「これまでの案」にまとめています。</span><a href="#round4">第4稿を見る</a></p>
+<p class="update"><b>11月3日 更新</b><span>閉じた絵と開いた絵がつながる、2枚1組の壁紙（第5稿・4組）を追加しました。前の案は「これまでの案」にまとめています。</span><a href="#round5">第5稿を見る</a></p>
 
 <header class="hero">
   <div>
     <p class="eyebrow">iPhone Duo · iOS 27.1 · 2026年11月 調査</p>
     <h1>表紙と、見開き。<small>iPhone Duo のホーム画面を、本のように組む</small></h1>
     <p class="lead">iPhone Duo は閉じると5.4型の1画面、開くと7.6型でホーム画面が2ページ並びます。2つの画面は同じ比率で、外側は内側のちょうど半分。つまり<strong>外側は本の「表紙」、内側は「見開き」</strong>として考えるとデザインがまとまります。</p>
-    <p class="lead">公式発表、国内外のレビュー、iOS 27 の新しいウィジェットを調べたうえで、アイコンが見やすい幾何学模様のホーム画面をつくりました。模様と色を選んで、最後の質問に答えてください。そこからあなた用に仕上げます。</p>
-    <ul class="index" aria-label="第4稿の模様"><li><a class="txt" href="#round4" data-pick="seigaiha">青海波</a></li><li><a class="txt" href="#round4" data-pick="asanoha">麻の葉</a></li><li><a class="txt" href="#round4" data-pick="shippo">七宝</a></li><li><a class="txt" href="#round4" data-pick="kikko">亀甲</a></li><li><a class="txt" href="#round4" data-pick="ichimatsu">市松</a></li><li><a class="txt" href="#round4" data-pick="hamon">同心円</a></li></ul>
+    <p class="lead">公式発表、国内外のレビュー、iOS 27 の新しいウィジェットを調べたうえで、閉じた絵と開いた絵がつながる2枚1組の壁紙を4組つくりました。気に入った組を選んで、最後の質問に答えてください。そこからあなた用に仕上げます。</p>
+    <ul class="index" aria-label="第5稿の4組"><li><a href="#r5shoji"><span class="sw ph" style="background-image:url(img/r5-shoji_outer.jpg)"></span><b>影</b>障子の影</a></li><li><a href="#r5tsuki"><span class="sw ph" style="background-image:url(img/r5-tsuki_outer.jpg)"></span><b>月</b>満ちる月</a></li><li><a href="#r5sakyu"><span class="sw ph" style="background-image:url(img/r5-sakyu_outer.jpg)"></span><b>砂</b>夜明けの砂丘</a></li><li><a href="#r5hon"><span class="sw ph" style="background-image:url(img/r5-hon_outer.jpg)"></span><b>本</b>表紙と見返し</a></li></ul>
   </div>
   <div class="diagram">
     <svg viewBox="0 0 600 340" role="img" aria-label="外側の画面は内側のちょうど半分。開くと外側の1ページが見開きの左ページになり、折り目がページの境目になる図">
@@ -381,30 +399,82 @@ p{margin:0}
   </div>
 </header>
 
-<section class="block" id="round4">
+<section class="block" id="round5">
  <div class="showroom">
   <div class="sec-head">
-    <p class="eyebrow">Round 4 · 11月2日</p>
-    <h2>第4稿：見やすい幾何学模様</h2>
-    <p>写真をやめて、背景を控えめな幾何学模様にしました。模様の線は背景とほとんど同じ明るさにしてあるので、アイコンと文字がはっきり読めます。色は青を使わず、墨・鉄・焦茶・砂・苔・葡萄の6色から選べます。明るすぎる色は白い文字が読みにくくなるので、中間から暗めの色にしています。</p>
+    <p class="eyebrow">Round 5 · 11月3日</p>
+    <h2>第5稿：開くと、続きが見える</h2>
+    <p>Duo の壁紙は、閉じたときの外側と開いたときの内側の2枚で1組です。今回は2枚を同じ写真の切り抜きにせず、閉じた絵の「続き」を開いた絵に描きました。開くと、三日月が満月に、障子の影が本物の柴に変わります。</p>
+    <p>アイコンが並ぶ右側は、どの絵も暗く落ち着いた色にして、白い文字が読めるようにしています。青は使っていません。</p>
   </div>
-  <article class="concept" id="r4">
-    <div class="geo-gallery" role="group" aria-label="模様を選ぶ"></div>
+  <ul class="pairs" aria-label="第5稿の4組"><li><a href="#r5shoji"><span class="pair-imgs"><img src="img/r5-shoji_outer.jpg" alt="閉じたとき：月明かりの障子に映る柴の影" loading="lazy" decoding="async"><span class="arr" aria-hidden="true">→</span><img src="img/r5-shoji_inner.jpg" alt="開いたとき：障子が開き、縁側で満月を見上げる柴" loading="lazy" decoding="async"></span><b>障子の影</b><span class="pair-sub">柴の影 → 縁側の柴</span></a></li><li><a href="#r5tsuki"><span class="pair-imgs"><img src="img/r5-tsuki_outer.jpg" alt="閉じたとき：夕暮れの名残がある夜空に三日月とすすき" loading="lazy" decoding="async"><span class="arr" aria-hidden="true">→</span><img src="img/r5-tsuki_inner.jpg" alt="開いたとき：満月と、風になびくすすきの野原" loading="lazy" decoding="async"></span><b>満ちる月</b><span class="pair-sub">三日月 → 満月</span></a></li><li><a href="#r5sakyu"><span class="pair-imgs"><img src="img/r5-sakyu_outer.jpg" alt="閉じたとき：夜明け前の砂丘と、地平線の上の明けの明星" loading="lazy" decoding="async"><span class="arr" aria-hidden="true">→</span><img src="img/r5-sakyu_inner.jpg" alt="開いたとき：地平線から朝日がのぼり、砂丘に長い影が伸びる" loading="lazy" decoding="async"></span><b>夜明けの砂丘</b><span class="pair-sub">明けの明星 → 日の出</span></a></li><li><a href="#r5hon"><span class="pair-imgs"><img src="img/r5-hon_outer.jpg" alt="閉じたとき：焦茶の布張りの表紙に、月と柴の金の箔押し" loading="lazy" decoding="async"><span class="arr" aria-hidden="true">→</span><img src="img/r5-hon_inner.jpg" alt="開いたとき：金の筋が入った墨流しの見返しと、中央の綴じ目" loading="lazy" decoding="async"></span><b>表紙と見返し</b><span class="pair-sub">布の表紙 → 墨流しの見返し</span></a></li></ul>
+
+  <article class="concept" id="r5shoji">
+    <div class="c-head">
+      <span class="c-key" aria-hidden="true">影</span>
+      <div class="c-title"><h3>障子の影</h3><span class="en">Shadow on the Shoji</span></div>
+      <p class="tagline">閉じると、月明かりの障子に柴の影。開くと障子が開いていて、縁側で月を見上げる柴がいます。閉じたときの影の正体が、開くとわかる組み合わせです。</p>
+    </div>
     <div class="c-controls">
-      <span class="ctl"><span class="ctl-label" id="r4-pal">色</span><span class="seg" role="group" aria-labelledby="r4-pal" data-geo="pal"></span></span>
-      <span class="ctl"><span class="ctl-label" id="r4-icons">アイコン</span><span class="seg" role="group" aria-labelledby="r4-icons" data-ctl="icons"><button type="button" data-v="clear">クリア</button><button type="button" data-v="white">白</button></span></span>
-      <span class="ctl"><span class="ctl-label" id="r4-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="r4-p2" data-ctl="p2"><button type="button" data-v="none">壁紙だけ</button><button type="button" data-v="calendar">予定</button><button type="button" data-v="photo">柴の写真</button></span></span>
-      <span class="ctl"><span class="ctl-label" id="r4-view">配置</span><span class="seg" role="group" aria-labelledby="r4-view" data-ctl="view"><button type="button" data-v="apps">アプリ例</button><button type="button" data-v="slots">使う順</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r5shoji-show">表示</span><span class="seg" role="group" aria-labelledby="r5shoji-show" data-ctl="show"><button type="button" data-v="icons">アイコンあり</button><button type="button" data-v="wall">壁紙だけ</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r5shoji-icons">アイコン</span><span class="seg" role="group" aria-labelledby="r5shoji-icons" data-ctl="icons"><button type="button" data-v="clear">クリア</button><button type="button" data-v="white">白</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r5shoji-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="r5shoji-p2" data-ctl="p2"><button type="button" data-v="none">壁紙だけ</button><button type="button" data-v="calendar">予定</button><button type="button" data-v="photo">柴の写真</button></span></span>
     </div>
     <div class="stage"></div>
-    <p class="geo-note" id="geo-note" aria-live="polite"></p>
+    <dl class="recipe"><div><dt>閉じたとき</dt><dd>障子1枚を画面いっぱいに。柴の影は左下、紅葉の影は左上に置き、アイコンが並ぶ右側は無地の障子紙にしています。</dd></div><div><dt>開いたとき</dt><dd>左ページは開いた障子の向こうの夜の庭で、満月と、縁側で月を見上げる柴。右ページは閉じたままの障子で、障子の縦の枠がちょうど折り目に重なります。</dd></div><div><dt>アイコン</dt><dd>クリアか白。右ページは無地に近い障子なので、特大ウィジェットを置いても落ち着きます。</dd></div><div class="dl-row"><dt>実寸の画像</dt><dd class="dl"><a href="wallpapers/r5-shoji_outer_1398x2034.jpg" target="_blank" rel="noopener">閉じたとき <span class="num">1398×2034</span></a><a href="wallpapers/r5-shoji_inner_2670x1878.jpg" target="_blank" rel="noopener">開いたとき <span class="num">2670×1878</span></a></dd></div></dl>
   </article>
+
+  <article class="concept" id="r5tsuki">
+    <div class="c-head">
+      <span class="c-key" aria-hidden="true">月</span>
+      <div class="c-title"><h3>満ちる月</h3><span class="en">Waxing Moon</span></div>
+      <p class="tagline">閉じると三日月、開くと満月。三日月の暗い部分にも満月の形がうっすら見えていて（地球照）、開くとそれが満ちます。足もとのすすきは、開くと野原に広がります。</p>
+    </div>
+    <div class="c-controls">
+      <span class="ctl"><span class="ctl-label" id="r5tsuki-show">表示</span><span class="seg" role="group" aria-labelledby="r5tsuki-show" data-ctl="show"><button type="button" data-v="icons">アイコンあり</button><button type="button" data-v="wall">壁紙だけ</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r5tsuki-icons">アイコン</span><span class="seg" role="group" aria-labelledby="r5tsuki-icons" data-ctl="icons"><button type="button" data-v="clear">クリア</button><button type="button" data-v="white">白</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r5tsuki-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="r5tsuki-p2" data-ctl="p2"><button type="button" data-v="none">壁紙だけ</button><button type="button" data-v="calendar">予定</button><button type="button" data-v="photo">柴の写真</button></span></span>
+    </div>
+    <div class="stage"></div>
+    <dl class="recipe"><div><dt>閉じたとき</dt><dd>夕暮れの名残がある空に三日月。月は左上の「窓」に置き、右側のアイコンにかからないようにしています。</dd></div><div><dt>開いたとき</dt><dd>同じ夜空に満月。月は左ページの左上、すすきは画面の下だけにして、折り目とアイコンを避けています。</dd></div><div><dt>アイコン</dt><dd>クリアがおすすめ。黒に近い夜空なので、どのアイコンでも文字がよく読めます。</dd></div><div class="dl-row"><dt>実寸の画像</dt><dd class="dl"><a href="wallpapers/r5-tsuki_outer_1398x2034.jpg" target="_blank" rel="noopener">閉じたとき <span class="num">1398×2034</span></a><a href="wallpapers/r5-tsuki_inner_2670x1878.jpg" target="_blank" rel="noopener">開いたとき <span class="num">2670×1878</span></a></dd></div></dl>
+  </article>
+
+  <article class="concept" id="r5sakyu">
+    <div class="c-head">
+      <span class="c-key" aria-hidden="true">砂</span>
+      <div class="c-title"><h3>夜明けの砂丘</h3><span class="en">Dunes at Dawn</span></div>
+      <p class="tagline">閉じると夜明け前の砂丘と明けの明星、開くと地平線から朝日がのぼります。第1稿で気に入ってもらった「砂丘時計」を、写真のような質感で作り直しました。</p>
+    </div>
+    <div class="c-controls">
+      <span class="ctl"><span class="ctl-label" id="r5sakyu-show">表示</span><span class="seg" role="group" aria-labelledby="r5sakyu-show" data-ctl="show"><button type="button" data-v="icons">アイコンあり</button><button type="button" data-v="wall">壁紙だけ</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r5sakyu-icons">アイコン</span><span class="seg" role="group" aria-labelledby="r5sakyu-icons" data-ctl="icons"><button type="button" data-v="clear">クリア</button><button type="button" data-v="white">白</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r5sakyu-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="r5sakyu-p2" data-ctl="p2"><button type="button" data-v="none">壁紙だけ</button><button type="button" data-v="calendar">予定</button><button type="button" data-v="photo">柴の写真</button></span></span>
+    </div>
+    <div class="stage"></div>
+    <dl class="recipe"><div><dt>閉じたとき</dt><dd>夜明け前。地平線だけがほんのり明るく、左上に明けの明星が光ります。砂丘は暗く沈んでいるので、アイコンがよく見えます。</dd></div><div><dt>開いたとき</dt><dd>日の出の瞬間。太陽は左ページの左側にあり、朝日が砂丘の斜面を照らして、手前に長い影が伸びます。</dd></div><div><dt>アイコン</dt><dd>クリア。地平線のあたりは空が明るいので、文字が読みにくければ白にします。</dd></div><div class="dl-row"><dt>実寸の画像</dt><dd class="dl"><a href="wallpapers/r5-sakyu_outer_1398x2034.jpg" target="_blank" rel="noopener">閉じたとき <span class="num">1398×2034</span></a><a href="wallpapers/r5-sakyu_inner_2670x1878.jpg" target="_blank" rel="noopener">開いたとき <span class="num">2670×1878</span></a></dd></div></dl>
+  </article>
+
+  <article class="concept" id="r5hon">
+    <div class="c-head">
+      <span class="c-key" aria-hidden="true">本</span>
+      <div class="c-title"><h3>表紙と見返し</h3><span class="en">Cover and Endpapers</span></div>
+      <p class="tagline">閉じると布張りの本の表紙、開くと墨流しの見返し。本を開くのと同じように、Duoを開きます。表紙の金の箔押しは、三日月と柴のしるしです。</p>
+    </div>
+    <div class="c-controls">
+      <span class="ctl"><span class="ctl-label" id="r5hon-show">表示</span><span class="seg" role="group" aria-labelledby="r5hon-show" data-ctl="show"><button type="button" data-v="icons">アイコンあり</button><button type="button" data-v="wall">壁紙だけ</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r5hon-icons">アイコン</span><span class="seg" role="group" aria-labelledby="r5hon-icons" data-ctl="icons"><button type="button" data-v="clear">クリア</button><button type="button" data-v="white">白</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r5hon-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="r5hon-p2" data-ctl="p2"><button type="button" data-v="none">壁紙だけ</button><button type="button" data-v="calendar">予定</button><button type="button" data-v="photo">柴の写真</button></span></span>
+    </div>
+    <div class="stage"></div>
+    <dl class="recipe"><div><dt>閉じたとき</dt><dd>焦茶の布張りに、金の箔押しと空押しの二重線。左端には、本の背に沿った溝を入れています。</dd></div><div><dt>開いたとき</dt><dd>金の筋が入った墨流し。左ページの縁には表紙の布が折り返してあり、中央には綴じ目の影があるので、折り目が本の綴じ目に見えます。</dd></div><div><dt>アイコン</dt><dd>クリア。模様は暗い茶色の濃淡なので、白い文字が読めます。</dd></div><div class="dl-row"><dt>実寸の画像</dt><dd class="dl"><a href="wallpapers/r5-hon_outer_1398x2034.jpg" target="_blank" rel="noopener">閉じたとき <span class="num">1398×2034</span></a><a href="wallpapers/r5-hon_inner_2670x1878.jpg" target="_blank" rel="noopener">開いたとき <span class="num">2670×1878</span></a></dd></div></dl>
+  </article>
+
   <div class="setup" id="setup">
     <h3>設定チェックリスト（右手・ケースあり）</h3>
     <p class="hint">チェックはこのブラウザに保存されます。Duoの壁紙設定の画面はまだ詳しく紹介されていないため、言葉は実機の表示に合わせてください。</p>
     <ul class="checklist">
       <li><label><input type="checkbox" id="ck-edge"><span><b>「左端を移動」をオン</b><small>「設定」→「画面表示と明るさ」→「左端を移動」。ケースの縁での誤タッチが減ります。</small></span></label></li>
-      <li><label><input type="checkbox" id="ck-wall"><span><b>壁紙を外側用と内側用で設定</b><small>壁紙の画像を写真に保存 →「設定」→「壁紙」→「新しい壁紙を追加」→「写真」。外側には縦長、内側には横長の画像を選びます。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-wall"><span><b>壁紙を外側用と内側用で設定</b><small>「実寸の画像」を開いて長押しし、写真に保存 →「設定」→「壁紙」→「新しい壁紙を追加」→「写真」。外側には「閉じたとき」の縦長、内側には「開いたとき」の横長を選びます。</small></span></label></li>
       <li><label><input type="checkbox" id="ck-icon"><span><b>アイコンの見た目を変える</b><small>ホーム画面の空いた所を長押し →「編集」→「カスタマイズ」。クリアを選ぶか、白いアイコンにするなら色合い調整で白を選びます。</small></span></label></li>
       <li><label><input type="checkbox" id="ck-album"><span><b>「柴」アルバムを作る</b><small>写真アプリで柴の写真を1つのアルバムにまとめます。P2の特大ウィジェットとStandByで使います。</small></span></label></li>
       <li><label><input type="checkbox" id="ck-widget"><span><b>ウィジェットを置く</b><small>「編集」→「ウィジェットを追加」。P1の右上に小、P2に特大の写真を置き、長押しでアルバムを「柴」にします。</small></span></label></li>
@@ -412,7 +482,7 @@ p{margin:0}
       <li><label><input type="checkbox" id="ck-tidy"><span><b>残りのアプリはホーム画面から外す</b><small>アイコンを長押し →「Appを削除」→「ホーム画面から取り除く」。アプリ自体は消えず、アプリライブラリに残ります。</small></span></label></li>
       <li><label><input type="checkbox" id="ck-mute"><span><b>消音モードをコントロールセンターに</b><small>コントロールセンター左上の「＋」→「コントロールを追加」→「消音モード」。</small></span></label></li>
     </ul>
-    <p class="files-note">壁紙（外側 <span class="num">1398×2034</span>、内側 <span class="num">2670×1878</span>）は、6つの模様の「墨」をリポジトリの <span class="num">wallpapers</span> フォルダに入れてあります。ほかの色がよければ、その組み合わせで作って送ります。</p>
+    <p class="files-note">第5稿の8枚（外側 <span class="num">1398×2034</span>、内側 <span class="num">2670×1878</span>）は、各案の「実寸の画像」から保存できます。リポジトリの <span class="num">wallpapers</span> フォルダにも同じものを入れてあります。</p>
   </div>
  </div>
 </section>
@@ -446,7 +516,27 @@ p{margin:0}
 
 <section class="block" id="older">
   <details class="older">
-    <summary><span class="eyebrow">History</span><b>これまでの案（第1〜3稿）</b><span>イラストや写真の壁紙で作った案です</span></summary>
+    <summary><span class="eyebrow">History</span><b>これまでの案（第1〜4稿）</b><span>イラスト・写真・幾何学模様の壁紙で作った案です</span></summary>
+<section class="block" id="round4">
+ <div class="showroom">
+  <div class="sec-head">
+    <p class="eyebrow">Round 4 · 11月2日</p>
+    <h2>第4稿：見やすい幾何学模様</h2>
+    <p>写真をやめて、背景を控えめな幾何学模様にしました。模様の線は背景とほとんど同じ明るさにしてあるので、アイコンと文字がはっきり読めます。色は青を使わず、墨・鉄・焦茶・砂・苔・葡萄の6色から選べます。明るすぎる色は白い文字が読みにくくなるので、中間から暗めの色にしています。</p>
+  </div>
+  <article class="concept" id="r4">
+    <div class="geo-gallery" role="group" aria-label="模様を選ぶ"></div>
+    <div class="c-controls">
+      <span class="ctl"><span class="ctl-label" id="r4-pal">色</span><span class="seg" role="group" aria-labelledby="r4-pal" data-geo="pal"></span></span>
+      <span class="ctl"><span class="ctl-label" id="r4-icons">アイコン</span><span class="seg" role="group" aria-labelledby="r4-icons" data-ctl="icons"><button type="button" data-v="clear">クリア</button><button type="button" data-v="white">白</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r4-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="r4-p2" data-ctl="p2"><button type="button" data-v="none">壁紙だけ</button><button type="button" data-v="calendar">予定</button><button type="button" data-v="photo">柴の写真</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r4-view">配置</span><span class="seg" role="group" aria-labelledby="r4-view" data-ctl="view"><button type="button" data-v="apps">アプリ例</button><button type="button" data-v="slots">使う順</button></span></span>
+    </div>
+    <div class="stage"></div>
+    <p class="geo-note" id="geo-note" aria-live="polite"></p>
+  </article>
+ </div>
+</section>
 <section class="block" id="round3">
  <div class="showroom">
   <div class="sec-head">
@@ -742,12 +832,12 @@ p{margin:0}
   <div class="sec-head">
     <p class="eyebrow">Next</p>
     <h2>次に決めたいこと</h2>
-    <p>第4稿を見て、次の5つを教えてください。まだ決まっていないものは空欄で大丈夫です。</p>
+    <p>第5稿を見て、次の5つを教えてください。まだ決まっていないものは空欄で大丈夫です。</p>
   </div>
   <div class="together">
     <ol class="questions">
-      <li><b>気に入った模様</b><span>青海波・麻の葉・七宝・亀甲・市松・同心円のどれか。</span></li>
-      <li><b>色</b><span>墨・鉄・焦茶・砂・苔・葡萄のどれか。</span></li>
+      <li><b>気に入った組</b><span>障子の影・満ちる月・夜明けの砂丘・表紙と見返しから、2つまで。</span></li>
+      <li><b>直したいところ</b><span>明るさ、月や柴の位置、柴を影ではなく毛色つきにする、など。</span></li>
       <li><b>アイコン</b><span>クリア（ガラス）か、白か。</span></li>
       <li><b>開いた右ページ</b><span>壁紙だけ・予定・柴の写真のどれか。</span></li>
       <li><b>使う順のアプリ</b><span>決まったら①〜⑩の順で。①〜④がDockに入ります。</span></li>
@@ -766,7 +856,8 @@ p{margin:0}
   <div class="deliver">
     <b>回答をもらったら作るもの</b>
     <ul>
-      <li>選んだ模様と色の壁紙（外側・内側の実寸）</li>
+      <li>選んだ組の仕上げ（明るさや位置を調整した実寸の2枚）</li>
+      <li>同じ組の「昼」の2枚（ライトモード用）</li>
       <li>アプリ名入りの配置図（P1・P2・Dock）</li>
       <li>ロック画面とStandByの合わせ方</li>
     </ul>
@@ -805,6 +896,10 @@ p{margin:0}
       <li><a href="https://unsplash.com/photos/brown-and-white-short-coated-dog-on-brown-leaves-during-daytime-odJtBMxGEfk" target="_blank" rel="noopener">落ち葉と柴：Charlotte Rush</a></li>
       <li><a href="https://unsplash.com/photos/a-happy-shiba-inu-dog-sits-on-a-pebble-beach-En7pqRghArU" target="_blank" rel="noopener">浜辺の柴：Marco Grosso</a></li>
     </ul></div>
+    <div><h3>第5稿の素材</h3><ul>
+      <li><a href="https://svs.gsfc.nasa.gov/4720" target="_blank" rel="noopener">NASA's Scientific Visualization Studio：CGI Moon Kit（月の表面）</a></li>
+      <li>障子・すすき・砂丘・布・墨流しは、すべてコードで描いたものです</li>
+    </ul></div>
     <div><h3>壁紙・カスタマイズ</h3><ul>
       <li><a href="https://www.iclarified.com/102102/download-the-official-iphone-duo-wallpaper-here" target="_blank" rel="noopener">iClarified：iPhone Duo の壁紙</a></li>
       <li><a href="https://duowallpaper.org/iphone-duo-wallpaper-size" target="_blank" rel="noopener">duowallpaper.org：壁紙サイズ（Apple非公式）</a></li>
@@ -813,7 +908,7 @@ p{margin:0}
       <li><a href="https://gadgetzamurai.jp/?p=8035" target="_blank" rel="noopener">ガジェットザムライ：ホーム画面の配色トレンド</a></li>
     </ul></div>
   </div>
-  <p class="foot">モックアップはイメージです。ホーム画面の列×行数は未公表のため1ページ＝4列×6行で、Dockと時計の位置は公式の説明をもとに描いています。アイコンは汎用の図形で、実際のアプリのアイコンとは違います。第3稿の写真はUnsplashライセンスで公開されているものです。予定・天気・曲名などはすべて例です。</p>
+  <p class="foot">モックアップはイメージです。ホーム画面の列×行数は未公表のため1ページ＝4列×6行で、Dockと時計の位置は公式の説明をもとに描いています。アイコンは汎用の図形で、実際のアプリのアイコンとは違います。第3稿の写真はUnsplashライセンスで公開されているものです。第5稿の月の表面はNASAの公開データ（CGI Moon Kit）から描き、それ以外はコードで描いています。予定・天気・曲名などはすべて例です。</p>
 </section>
 
 </main>
@@ -1239,8 +1334,22 @@ Object.assign(CONCEPTS,{
     photo:{cover:{src:"img/r3-shiba-aki_outer.jpg"}, spread:{src:"img/r3-shiba-aki_inner.jpg"}}, p2img:"img/r3-shiba-xl.jpg",
     pages:[[Wd("calendar","S",3,1,{dow:"月曜日",d:"2",events:R2_EVENTS}),S(5,4,6),S(6,4,5),S(7,4,4),S(8,4,3)]], dock:[1,2,3,4] }
 });
+
+/* round 5: two-image pairs (closed picture -> its continuation when opened) */
+const R5_PAGE=[[Wd("calendar","S",3,1,{dow:"火曜日",d:"3",events:R2_EVENTS}),...R2_SLOTS]];
+const r5=(name,file)=>({ name, icons:"clear", frame:"night", mode:"dark", p2:"none", show:"icons", thumb:"off",
+  photo:{cover:{src:`img/${file}_outer.jpg`}, spread:{src:`img/${file}_inner.jpg`}}, p2img:"img/r3-shiba-xl.jpg",
+  p2cal:{dow:"火曜日",d:"3",events:R2_EVENTS,tomorrow:[["7:00","柴の散歩","川沿い","#E2A04A"],["15:00","トリミング","","#B48EDB"]]},
+  pages:R5_PAGE, dock:[1,2,3,4] });
+Object.assign(CONCEPTS,{
+  r5shoji:r5("障子の影","r5-shoji"),
+  r5tsuki:r5("満ちる月","r5-tsuki"),
+  r5sakyu:r5("夜明けの砂丘","r5-sakyu"),
+  r5hon:r5("表紙と見返し","r5-hon")
+});
 function p2Items(c){
   if(c.p2==="none") return [];
+  if(c.p2==="calendar" && c.p2cal) return [Wd("calendar","XL",1,1,c.p2cal)];
   if(c.p2==="photo" && c.p2img) return [Wd("photo","XL",1,1,{img:c.p2img,chip:"柴アルバム"})];
   return P2SETS[c.p2]();
 }
@@ -1278,12 +1387,15 @@ function render(id){
   const attrs=`class="duo device ${c.frame}" data-c="${id}" data-mode="${c.mode}" data-icons="${c.icons}"${id==="oshi"?` style="--tint:${tint}"`:""}`;
   const modeJP=c.mode==="dark"?"夜":(id==="night"?"夜明け":"昼");
   const thumb=c.thumb==="on"?`<div class="thumbmap"></div>`:"";
+  const bare=c.show==="wall";
+  const coverPage=bare?"":`<div class="page">${p1}${dockHTML(c)}${STATUS}<div class="dots"><i class="on"></i><i></i></div></div>`;
+  const spreadPages=bare?"":`<div class="page p1">${p1}</div><div class="page p2">${p2}${dockHTML(c)}${STATUS}</div>`;
   stage.innerHTML=
-   `<figure class="f-cover"><div ${attrs}><div class="screen" role="img" aria-label="${c.name}（${modeJP}）：閉じた状態の外側画面。P1とDock">`+
-   `<div class="wall">${wallHTML(id,c,"cover")}</div><div class="page">${p1}${dockHTML(c)}${STATUS}<div class="dots"><i class="on"></i><i></i></div></div>${thumb}</div></div>`+
+   `<figure class="f-cover"><div ${attrs}><div class="screen" role="img" aria-label="${c.name}（${modeJP}）：閉じた状態の外側画面。${bare?"壁紙だけ":"P1とDock"}">`+
+   `<div class="wall">${wallHTML(id,c,"cover")}</div>${coverPage}${thumb}</div></div>`+
    `<figcaption><b>外側 5.4型・閉じた状態</b><span>P1</span></figcaption></figure>`+
-   `<figure class="f-spread"><div ${attrs}><div class="screen" role="img" aria-label="${c.name}（${modeJP}）：開いた状態の内側画面。左にP1、右にP2とDock">`+
-   `<div class="wall">${wallHTML(id,c,"spread")}</div><div class="page p1">${p1}</div><div class="page p2">${p2}${dockHTML(c)}${STATUS}</div><div class="crease"></div></div></div>`+
+   `<figure class="f-spread"><div ${attrs}><div class="screen" role="img" aria-label="${c.name}（${modeJP}）：開いた状態の内側画面。${bare?"壁紙だけ":"左にP1、右にP2とDock"}">`+
+   `<div class="wall">${wallHTML(id,c,"spread")}</div>${spreadPages}<div class="crease"></div></div></div>`+
    `<figcaption><b>内側 7.6型・開いた状態</b><span>P1 ＋ P2</span></figcaption></figure>`;
   const lg=sec.querySelector(".legend"); if(lg) lg.hidden=c.thumb!=="on";
 }
@@ -1462,11 +1574,11 @@ document.querySelectorAll("#setup input[type=checkbox]").forEach(cb=>{
 });
 
 // answer template
-const TEMPLATE=["【第4稿への回答】","1. 気に入った模様（青海波／麻の葉／七宝／亀甲／市松／同心円）：","2. 色（墨／鉄／焦茶／砂／苔／葡萄）：","3. アイコン（クリア／白）：","4. 開いた右ページ（壁紙だけ／予定／柴の写真）：","5. 使う順のアプリ（①〜⑩、決まったら）："].join("\n");
+const TEMPLATE=["【第5稿への回答】","1. 気に入った組（障子の影／満ちる月／夜明けの砂丘／表紙と見返し、2つまで）：","2. 直したいところ（明るさ・位置・柴の毛色など）：","3. アイコン（クリア／白）：","4. 開いた右ページ（壁紙だけ／予定／柴の写真）：","5. 使う順のアプリ（①〜⑩、決まったら）："].join("\n");
 const ta=document.getElementById("answer-template"), status=document.getElementById("copy-status");
-let saved=null; try{ saved=localStorage.getItem("duo-answer-4"); }catch(e){}
+let saved=null; try{ saved=localStorage.getItem("duo-answer-5"); }catch(e){}
 ta.value=saved||TEMPLATE;
-ta.addEventListener("input",()=>{ try{ localStorage.setItem("duo-answer-4",ta.value); }catch(e){} });
+ta.addEventListener("input",()=>{ try{ localStorage.setItem("duo-answer-5",ta.value); }catch(e){} });
 document.getElementById("copy-btn").addEventListener("click",()=>{
   const done=()=>{ status.textContent="コピーしました。チャットに貼ってください。"; };
   const fallback=()=>{ ta.focus(); ta.select(); status.textContent="選択しました。⌘C（Ctrl+C）でコピーしてください。"; };
@@ -1474,7 +1586,7 @@ document.getElementById("copy-btn").addEventListener("click",()=>{
 });
 document.getElementById("reset-btn").addEventListener("click",()=>{
   ta.value=TEMPLATE; status.textContent="書き込みを消しました。";
-  try{ localStorage.removeItem("duo-answer-4"); }catch(e){}
+  try{ localStorage.removeItem("duo-answer-5"); }catch(e){}
 });
 
 // for exporting full-size wallpapers
