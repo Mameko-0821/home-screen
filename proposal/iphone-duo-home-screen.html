@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@500;700&family=Zen+Old+Mincho:wght@500;700;900&display=swap">
 <style>
-/* Layout: a proposal book. Thesis + fold diagram, a spec sheet of research facts, five concepts shown as live device mockups (closed cover + open spread), rules, then questions to answer together. */
+/* Layout: a proposal book. Thesis + fold diagram, the current round as a large annotated device mockup (closed cover + open spread) with a before/after, a spec sheet of research facts, earlier rounds folded away, rules, then questions to answer together. */
 :root{
   --bg:#ECEEF1;
   --surface:#F8F9FA;
@@ -355,20 +355,80 @@ p{margin:0}
 .dl .num{color:var(--muted);font-size:.8125rem}
 .duo[data-c^="r5"]{--label:#fff;--label-shadow:0 .2cqw .7cqw rgba(0,0,0,.72);--glass-lo:rgba(255,255,255,.03);--w-bg:rgba(14,12,10,.44);--w-line:rgba(255,255,255,.14);--w-fg:#F3EEE6;--w-muted:rgba(243,238,230,.7);--w-accent:#E2C48E;--w-blur:blur(14px) saturate(1.2);--dock-bg:rgba(14,12,10,.32);--dock-line:rgba(255,255,255,.14)}
 
+/* Round 6: legibility first. Solid wallpaper, colour icons, look-only widgets where the thumb can't reach, apps bottom-right. Shown on the page's own light/dark ground (no dark showroom) and at a larger scale, with a legend beside the closed screen. */
+.wall .solid{display:block;width:100%;height:100%;background:var(--wall)}
+.duo[data-icons="color"] .tile{background:linear-gradient(180deg,var(--ci0,#8E8E93),var(--ci1,#636366));color:var(--ci-fg,#fff);box-shadow:inset 0 0 0 .15cqw rgba(255,255,255,.06),0 .5cqw 1.4cqw rgba(0,0,0,.22)}
+.duo[data-icons="color"] .tile svg{stroke-width:2}
+.duo[data-icons="color"] .tile.slot{background:var(--slot-bg);color:var(--slot-fg)}
+.duo[data-c="r6"][data-mode="dark"]{--wall:#1C1B1A;--label:#fff;--label-shadow:none;--w-bg:#2D2C2A;--w-line:rgba(255,255,255,.05);--w-fg:#F6F4F0;--w-muted:#BDB8B0;--w-accent:#FF7A66;--dock-bg:rgba(255,255,255,.08);--dock-line:rgba(255,255,255,.07);--slot-bg:#3B3A37;--slot-fg:#fff}
+.duo[data-c="r6"][data-mode="light"]{--wall:#E9E4DA;--label:#2A2723;--label-shadow:none;--w-bg:#FFFFFF;--w-line:rgba(60,50,40,.07);--w-fg:#211F1B;--w-muted:#665F56;--w-accent:#C9362A;--dock-bg:rgba(255,255,255,.72);--dock-line:rgba(60,50,40,.08);--slot-bg:#FFFFFF;--slot-fg:#211F1B}
+.duo[data-c="r6"] .wdg{font-size:3.4cqw;box-shadow:inset 0 0 0 .22cqw var(--w-line),0 .6cqw 1.6cqw rgba(0,0,0,.12)}
+.duo[data-c="r6"] .w-cap{font-size:3cqw}
+.duo[data-c="r6"] .w-mini{font-size:3.3cqw}
+.duo[data-c="r6"] .lbl{font-size:2.8cqw;font-weight:500;letter-spacing:0;max-width:none;overflow:visible}
+.duo[data-c="r6"][data-mode="light"] .grid .app{justify-content:center}
+.duo[data-c="r6"][data-mode="light"] .grid .lbl{display:none}
+.duo[data-c="r6"][data-mode="light"] .grid .tile{width:15cqw;border-radius:3.9cqw}
+.stage.r6-stage{grid-template-columns:minmax(0,.8fr) minmax(0,1fr);grid-template-areas:"cover zones" "spread spread";align-items:center;row-gap:clamp(28px,4vw,52px)}
+.r6-stage .f-cover{grid-area:cover}
+.r6-stage .zones{grid-area:zones}
+.r6-stage .f-spread{grid-area:spread}
+@media (max-width:680px){
+  .stage.r6-stage{grid-template-columns:1fr;grid-template-areas:"cover" "zones" "spread"}
+  .stage.r6-stage .f-cover{width:80%;margin-inline:auto}
+}
+.zones{display:grid;gap:16px;min-width:0;align-content:center}
+.zones-h{font-family:var(--f-display);font-weight:700;font-size:1.25rem;line-height:1.4}
+.zones ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.zones li{display:grid;grid-template-columns:3.6em minmax(0,1fr);gap:14px;align-items:start}
+.zones li b{display:block;font-size:1rem;line-height:1.5}
+.zones li p{font-size:.9375rem;color:var(--muted);line-height:1.7}
+.z{display:inline-flex;justify-content:center;align-items:center;min-height:30px;padding:2px 6px;border-radius:8px;font-size:.875rem;font-weight:700;line-height:1.2;white-space:nowrap}
+.z-look{box-shadow:inset 0 0 0 1.5px var(--muted);color:var(--ink)}
+.z-tap{background:var(--ink);color:var(--bg)}
+.z-none{box-shadow:inset 0 0 0 1.5px var(--line);color:var(--muted)}
+.zones-key{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.8125rem;color:var(--muted)}
+.zones-key span{display:inline-flex;align-items:center;gap:6px}
+.zones-key i{width:14px;height:14px;border-radius:4px;display:inline-block}
+.zones-key .k-look{box-shadow:inset 0 0 0 1.5px var(--muted)}
+.zones-key .k-tap{background:var(--ink)}
+.r6-note{margin-top:16px;font-size:.9375rem;color:var(--muted);max-width:46em}
+.r6-note b{color:var(--ink);font-family:var(--f-display);font-size:1.0625rem;margin-right:.6em}
+.flip{margin-top:clamp(48px,7vw,72px);display:grid;gap:22px;scroll-margin-top:12px}
+.flip-head{display:grid;gap:6px}
+.flip-head h3{font-size:clamp(1.4rem,1.1rem + 1vw,1.75rem)}
+.flip-head p{color:var(--muted)}
+.flip-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(20px,4vw,48px);align-items:start}
+@media (max-width:820px){.flip-body{grid-template-columns:1fr}}
+.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2.4vw,24px);background:var(--stage);border-radius:22px;padding:clamp(14px,2.6vw,28px)}
+.ba figure{margin:0;display:grid;gap:10px;min-width:0}
+.ba .device{border-radius:9% / 6.2%}
+.ba figcaption{display:flex;flex-wrap:wrap;gap:2px 10px;align-items:baseline;font-size:.875rem;color:var(--muted)}
+.ba figcaption b{font-family:var(--f-display);font-size:1.0625rem;color:var(--ink)}
+.flips{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.flips li{display:grid;gap:6px;padding-bottom:18px;border-bottom:1px solid var(--line);min-width:0}
+.flips li:last-child{border-bottom:0;padding-bottom:0}
+.flips .was{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-size:.875rem;color:var(--muted)}
+.flips .was span{font-size:.75rem;padding:1px 8px;border-radius:999px;box-shadow:inset 0 0 0 1px var(--line)}
+.flips h4{font-size:1.1875rem}
+.flips li > p:last-child{font-size:.9375rem;line-height:1.8}
+.files-note{display:grid;gap:10px}
+.files-note .dl{display:flex;flex-wrap:wrap;gap:8px 10px}
+
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
 
 <main class="wrap">
 
-<p class="update"><b>11月3日 更新</b><span>閉じた絵と開いた絵がつながる、2枚1組の壁紙（第5稿・4組）を追加しました。前の案は「これまでの案」にまとめています。</span><a href="#round5">第5稿を見る</a></p>
+<p class="update"><b>11月3日 更新</b><span>見やすさを最優先に作り直した第6稿を追加しました。壁紙・アイコン・配置の前提から見直しています。前の案は「これまでの案」にまとめています。</span><a href="#round6">第6稿を見る</a></p>
 
 <header class="hero">
   <div>
     <p class="eyebrow">iPhone Duo · iOS 27.1 · 2026年11月 調査</p>
     <h1>表紙と、見開き。<small>iPhone Duo のホーム画面を、本のように組む</small></h1>
     <p class="lead">iPhone Duo は閉じると5.4型の1画面、開くと7.6型でホーム画面が2ページ並びます。2つの画面は同じ比率で、外側は内側のちょうど半分。つまり<strong>外側は本の「表紙」、内側は「見開き」</strong>として考えるとデザインがまとまります。</p>
-    <p class="lead">公式発表、国内外のレビュー、iOS 27 の新しいウィジェットを調べたうえで、閉じた絵と開いた絵がつながる2枚1組の壁紙を4組つくりました。気に入った組を選んで、最後の質問に答えてください。そこからあなた用に仕上げます。</p>
-    <ul class="index" aria-label="第5稿の4組"><li><a href="#r5shoji"><span class="sw ph" style="background-image:url(img/r5-shoji_outer.jpg)"></span><b>影</b>障子の影</a></li><li><a href="#r5tsuki"><span class="sw ph" style="background-image:url(img/r5-tsuki_outer.jpg)"></span><b>月</b>満ちる月</a></li><li><a href="#r5sakyu"><span class="sw ph" style="background-image:url(img/r5-sakyu_outer.jpg)"></span><b>砂</b>夜明けの砂丘</a></li><li><a href="#r5hon"><span class="sw ph" style="background-image:url(img/r5-hon_outer.jpg)"></span><b>本</b>表紙と見返し</a></li></ul>
+    <p class="lead">公式発表、国内外のレビュー、iOS 27 の新しいウィジェットを調べて案を重ね、第6稿では見やすさを最優先にしました。壁紙は無地、アイコンはカラー、親指が届かない所には見るだけのウィジェット。背景の色と右ページを選んで、最後の質問に答えてください。そこからあなた用に仕上げます。</p>
+    <ul class="index" aria-label="このページの中身"><li><a class="txt" href="#round6">第6稿を見る</a></li><li><a class="txt" href="#r6-flip">やめた4つの前提</a></li><li><a class="txt" href="#setup">設定チェックリスト</a></li><li><a class="txt" href="#together">次に決めたいこと</a></li></ul>
   </div>
   <div class="diagram">
     <svg viewBox="0 0 600 340" role="img" aria-label="外側の画面は内側のちょうど半分。開くと外側の1ページが見開きの左ページになり、折り目がページの境目になる図">
@@ -399,6 +459,89 @@ p{margin:0}
   </div>
 </header>
 
+<section class="block" id="round6">
+  <div class="sec-head">
+    <p class="eyebrow">Round 6 · 11月3日</p>
+    <h2>第6稿：まず、見やすく</h2>
+    <p>第5稿まで、見づらさの原因は壁紙だと考えて、イラスト、写真、模様、2枚1組の絵と作り直してきました。でも原因は壁紙だけではありませんでした。アイコンはどれも同じ灰色のガラスで見分けにくく、アプリは画面のまん中に小さく固まり、開いた右ページは空っぽでした。そこで、これまでの前提を4つやめて組み直しました。</p>
+  </div>
+
+  <article class="concept r6" id="r6">
+    <div class="c-controls">
+      <span class="ctl"><span class="ctl-label" id="r6-mode">背景</span><span class="seg" role="group" aria-labelledby="r6-mode" data-ctl="mode"><button type="button" data-v="dark">墨（暗い）</button><button type="button" data-v="light">生成り（明るい）</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r6-p2">開いた右ページ</span><span class="seg" role="group" aria-labelledby="r6-p2" data-ctl="p2"><button type="button" data-v="photo">柴の写真</button><button type="button" data-v="calendar">今日の予定</button></span></span>
+      <span class="ctl"><span class="ctl-label" id="r6-view">アプリ</span><span class="seg" role="group" aria-labelledby="r6-view" data-ctl="view"><button type="button" data-v="apps">アプリ例</button><button type="button" data-v="slots">使う順</button></span></span>
+    </div>
+    <div class="stage r6-stage"></div>
+    <p class="r6-note" id="r6-note" aria-live="polite"></p>
+  </article>
+
+  <div class="flip" id="r6-flip">
+    <div class="flip-head">
+      <h3>やめた4つの前提</h3>
+      <p>同じ外側の画面を、第5稿の「障子の影」と並べました。</p>
+    </div>
+    <div class="flip-body">
+      <div class="ba" role="group" aria-label="第5稿と第6稿の、閉じた状態の画面">
+        <figure><div class="ba-dev" data-ba="before"></div><figcaption><b>第5稿</b><span>障子の影・クリア</span></figcaption></figure>
+        <figure><div class="ba-dev" data-ba="after"></div><figcaption><b>第6稿</b><span>墨・カラー</span></figcaption></figure>
+      </div>
+      <ul class="flips">
+        <li><p class="was"><span>これまで</span>壁紙の絵で個性を出す</p><h4>壁紙は無地にする</h4><p>絵がある限り、アイコンの後ろに線や明暗が入ります。第6稿の壁紙は無地の1色です。iPhoneの「カラー」で選べるので、画像も要りません。</p></li>
+        <li><p class="was"><span>これまで</span>アイコンをクリアや1色にそろえる</p><h4>アイコンは色で見分ける</h4><p>クリアや色合い調整では、どのアイコンも同じ灰色になり、名前を読まないと区別できません。標準のカラーに戻すと、緑ならメッセージ、赤い日付ならカレンダーと、色で探せます。</p></li>
+        <li><p class="was"><span>これまで</span>指が届かない左側は、景色のために空ける</p><h4>届かない所には、見るだけのものを置く</h4><p>左側を空けた分、アプリがまん中に小さく固まっていました。左と上には押さなくていい日付・天気・写真を置き、アプリは親指が届く右下にまとめます。</p></li>
+        <li><p class="was"><span>これまで</span>開いた右ページは壁紙だけ</p><h4>右ページには大きな1枚を</h4><p>開くと右半分が空っぽでした。特大ウィジェットで、柴の写真か今日の予定を1枚だけ大きく置きます。</p></li>
+      </ul>
+    </div>
+    <p class="tip"><b>絵の壁紙は</b><span>第5稿までの絵は、アイコンが並ばないロック画面で使えます。壁紙を追加するときに「ホーム画面をカスタマイズ」で「カラー」を選ぶと、ロック画面は絵、ホーム画面は無地の1組になります。</span></p>
+  </div>
+
+  <div class="setup" id="setup">
+    <h3>設定チェックリスト（右手・ケースあり）</h3>
+    <p class="hint">チェックはこのブラウザに保存されます。Duoの設定画面はまだ詳しく紹介されていないため、言葉は実機の表示に合わせてください。</p>
+    <ul class="checklist">
+      <li><label><input type="checkbox" id="ck-wall"><span><b>ホーム画面の壁紙を無地にする</b><small>「設定」→「壁紙」→「新しい壁紙を追加」。ロック画面には好きな絵や写真を選び、「ホーム画面をカスタマイズ」→「カラー」で墨か生成りに近い色を選びます。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-icon"><span><b>アイコンを「デフォルト」に戻す</b><small>ホーム画面の空いた所を長押し →「編集」→「カスタマイズ」→「デフォルト」。生成りにするなら「大」も選び、アプリ名を消します。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-album"><span><b>「柴」アルバムを作る</b><small>写真アプリで柴の写真を1つのアルバムにまとめます。写真ウィジェットとStandByで使います。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-widget"><span><b>ウィジェットを3つ置く</b><small>「編集」→「ウィジェットを追加」。P1の左上にカレンダー（小）、右上に天気（小）、左下に写真（小）。写真は長押しでアルバムを「柴」にします。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-p2"><span><b>P2に特大ウィジェットを1つ</b><small>2ページ目に写真かカレンダーの特大（<span class="num">4×6</span>）を置きます。開いたときの右ページになります。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-dock"><span><b>Dockに①〜④、右下に⑤〜⑧</b><small>アプリが決まったら、よく使う順に入れます。⑤が右下の角です。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-tidy"><span><b>残りのアプリはホーム画面から外す</b><small>アイコンを長押し →「Appを削除」→「ホーム画面から取り除く」。アプリ自体は消えず、アプリライブラリに残ります。</small></span></label></li>
+      <li><label><input type="checkbox" id="ck-edge"><span><b>「左端を移動」をオン</b><small>「設定」→「画面表示と明るさ」→「左端を移動」。ケースの縁での誤タッチが減ります。</small></span></label></li>
+    </ul>
+    <div class="files-note">
+      <p>色をぴったり合わせたいときは、無地の画像を使ってください（外側 <span class="num">1398×2034</span>、内側 <span class="num">2670×1878</span>）。リポジトリの <span class="num">wallpapers</span> フォルダにも入っています。</p>
+      <p class="dl"><a href="wallpapers/r6-sumi_outer_1398x2034.jpg" target="_blank" rel="noopener">墨・外側</a><a href="wallpapers/r6-sumi_inner_2670x1878.jpg" target="_blank" rel="noopener">墨・内側</a><a href="wallpapers/r6-kinari_outer_1398x2034.jpg" target="_blank" rel="noopener">生成り・外側</a><a href="wallpapers/r6-kinari_inner_2670x1878.jpg" target="_blank" rel="noopener">生成り・内側</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="facts">
+  <div class="sec-head">
+    <p class="eyebrow">Research</p>
+    <h2>調べてわかった、Duo の前提</h2>
+    <p>デザインに効く事実だけを12個に絞りました。<span class="num">公式</span>はAppleの発表、<span class="num">報道</span>はメディアの記事、<span class="num">レビュー</span>は実機を使った人の記事、<span class="num">推定</span>はまだ公表されていない部分です。</p>
+  </div>
+  <div class="facts">
+    <article class="fact"><span class="pill official">公式</span><h3>2つの画面は同じ比率</h3><p>外側5.4型（<span class="num">1398×2034</span>）、内側7.6型（<span class="num">1878×2670</span>）。どちらも約1:1.4で、外側の面積は内側のほぼ半分。開閉しても表示の比率が保たれます。</p><p class="src">Apple 技術仕様・ニュースルーム</p></article>
+    <article class="fact"><span class="pill official">公式</span><h3>開くとホーム画面が2ページ並ぶ</h3><p>内側ではホーム画面を2ページ同時に表示。左側には、ウィジェットが縦に並ぶ「今日」の表示があります。</p><p class="src">Apple ニュースルーム／Macworld</p></article>
+    <article class="fact"><span class="pill official">公式</span><h3>Dockは画面の横へ</h3><p>Dock、ロック画面のコントロール、アプリのナビゲーションは画面の横側に移動しました。縦の表示領域を広げるためです。国内の報道では右側に寄せられていると紹介されています。</p><p class="src">Apple ニュースルーム／Business Insider Japan</p></article>
+    <article class="fact"><span class="pill press">報道</span><h3>特大ウィジェット（<span class="num">4×6</span>）</h3><p>iOS 27で追加され、普通のiPhoneならホーム画面1ページ分の大きさ。純正は11アプリ17種類（カレンダー、天気、写真、メモ、ミュージック、TV、リマインダーなど）。</p><p class="src">9to5Mac／iPhone Mania</p></article>
+    <article class="fact"><span class="pill review">レビュー</span><h3>外側は左端に親指が届かない</h3><p>右手で持つと左端と左下が届きにくいため、よく使うアプリを右に寄せるのが最初の設定として勧められています。ケースを付けるなら「左端を移動」で誤タッチを減らせます。</p><p class="src">gori.me</p></article>
+    <article class="fact"><span class="pill press">報道</span><h3>壁紙は縦と横の2枚で1組</h3><p>外側は縦<span class="num">1398×2034</span>、内側は横<span class="num">2670×1878</span>。「壁紙ペアとして設定」か、画面ごとに別々に設定します。同じ1枚を使うと、外側では左右、内側では上下が切れます。</p><p class="src">iClarified／duowallpaper.org</p></article>
+    <article class="fact"><span class="pill review">レビュー</span><h3>アクションボタンがない</h3><p>Touch IDは電源ボタンに内蔵。アクションボタンの代わりに、ショートカットのウィジェットや、ロック画面右下のボタンにショートカットを割り当てる方法が紹介されています。</p><p class="src">gori.me／Apple 技術仕様</p></article>
+    <article class="fact"><span class="pill official">公式</span><h3>置くだけでStandBy</h3><p>充電していなくても、外側・内側のどちらでもStandByになります。写真フレーム、時計、ウィジェット置き場として使え、カレンダーと天気の文字盤も新しく加わりました。</p><p class="src">Apple ニュースルーム</p></article>
+    <article class="fact"><span class="pill official">公式</span><h3>アイコンの見た目は4種類</h3><p>デフォルト・ダーク・クリア・色合い調整（iOS 26から）。クリアは壁紙が透けるガラス風、色合い調整は好きな1色にそろえられます。</p><p class="src">MacRumors／ギズモード・ジャパン</p></article>
+    <article class="fact"><span class="pill official">公式</span><h3>本体は2色</h3><p>スターホワイトとナイトスカイ。純正ケースはサンドとネイビー、キックスタンド付きのFolioはネイビーとトープ。ホーム画面の色を本体に合わせると統一感が出ます。</p><p class="src">Apple ニュースルーム</p></article>
+    <article class="fact"><span class="pill official">公式</span><h3>2つのアプリを並べられる</h3><p>iPhoneで初めてのSplit View。よく使う組み合わせはペアとして保存でき、片方を開くともう片方も一緒に開きます。</p><p class="src">Apple ニュースルーム／gori.me</p></article>
+    <article class="fact"><span class="pill guess">推定</span><h3>アイコンの列×行は未公表</h3><p>内側のホーム画面に何列×何行並ぶかは、まだ公表されていません。この提案書では、1ページを<span class="num">4列×6行</span>として描いています。</p><p class="src">iPhone Mania</p></article>
+  </div>
+</section>
+
+
+<section class="block" id="older">
+  <details class="older">
+    <summary><span class="eyebrow">History</span><b>これまでの案（第1〜5稿）</b><span>イラスト・写真・模様・2枚1組の絵の壁紙で作った案です</span></summary>
 <section class="block" id="round5">
  <div class="showroom">
   <div class="sec-head">
@@ -468,55 +611,8 @@ p{margin:0}
     <div class="stage"></div>
     <dl class="recipe"><div><dt>閉じたとき</dt><dd>焦茶の布張りに、金の箔押しと空押しの二重線。左端には、本の背に沿った溝を入れています。</dd></div><div><dt>開いたとき</dt><dd>金の筋が入った墨流し。左ページの縁には表紙の布が折り返してあり、中央には綴じ目の影があるので、折り目が本の綴じ目に見えます。</dd></div><div><dt>アイコン</dt><dd>クリア。模様は暗い茶色の濃淡なので、白い文字が読めます。</dd></div><div class="dl-row"><dt>実寸の画像</dt><dd class="dl"><a href="wallpapers/r5-hon_outer_1398x2034.jpg" target="_blank" rel="noopener">閉じたとき <span class="num">1398×2034</span></a><a href="wallpapers/r5-hon_inner_2670x1878.jpg" target="_blank" rel="noopener">開いたとき <span class="num">2670×1878</span></a></dd></div></dl>
   </article>
-
-  <div class="setup" id="setup">
-    <h3>設定チェックリスト（右手・ケースあり）</h3>
-    <p class="hint">チェックはこのブラウザに保存されます。Duoの壁紙設定の画面はまだ詳しく紹介されていないため、言葉は実機の表示に合わせてください。</p>
-    <ul class="checklist">
-      <li><label><input type="checkbox" id="ck-edge"><span><b>「左端を移動」をオン</b><small>「設定」→「画面表示と明るさ」→「左端を移動」。ケースの縁での誤タッチが減ります。</small></span></label></li>
-      <li><label><input type="checkbox" id="ck-wall"><span><b>壁紙を外側用と内側用で設定</b><small>「実寸の画像」を開いて長押しし、写真に保存 →「設定」→「壁紙」→「新しい壁紙を追加」→「写真」。外側には「閉じたとき」の縦長、内側には「開いたとき」の横長を選びます。</small></span></label></li>
-      <li><label><input type="checkbox" id="ck-icon"><span><b>アイコンの見た目を変える</b><small>ホーム画面の空いた所を長押し →「編集」→「カスタマイズ」。クリアを選ぶか、白いアイコンにするなら色合い調整で白を選びます。</small></span></label></li>
-      <li><label><input type="checkbox" id="ck-album"><span><b>「柴」アルバムを作る</b><small>写真アプリで柴の写真を1つのアルバムにまとめます。P2の特大ウィジェットとStandByで使います。</small></span></label></li>
-      <li><label><input type="checkbox" id="ck-widget"><span><b>ウィジェットを置く</b><small>「編集」→「ウィジェットを追加」。P1の右上に小、P2に特大の写真を置き、長押しでアルバムを「柴」にします。</small></span></label></li>
-      <li><label><input type="checkbox" id="ck-dock"><span><b>Dockに①〜④、右下から⑤〜⑩</b><small>アプリが決まったら、よく使う順に入れていきます。</small></span></label></li>
-      <li><label><input type="checkbox" id="ck-tidy"><span><b>残りのアプリはホーム画面から外す</b><small>アイコンを長押し →「Appを削除」→「ホーム画面から取り除く」。アプリ自体は消えず、アプリライブラリに残ります。</small></span></label></li>
-      <li><label><input type="checkbox" id="ck-mute"><span><b>消音モードをコントロールセンターに</b><small>コントロールセンター左上の「＋」→「コントロールを追加」→「消音モード」。</small></span></label></li>
-    </ul>
-    <p class="files-note">第5稿の8枚（外側 <span class="num">1398×2034</span>、内側 <span class="num">2670×1878</span>）は、各案の「実寸の画像」から保存できます。リポジトリの <span class="num">wallpapers</span> フォルダにも同じものを入れてあります。</p>
-  </div>
  </div>
 </section>
-
-
-
-
-
-<section class="block" id="facts">
-  <div class="sec-head">
-    <p class="eyebrow">Research</p>
-    <h2>調べてわかった、Duo の前提</h2>
-    <p>デザインに効く事実だけを12個に絞りました。<span class="num">公式</span>はAppleの発表、<span class="num">報道</span>はメディアの記事、<span class="num">レビュー</span>は実機を使った人の記事、<span class="num">推定</span>はまだ公表されていない部分です。</p>
-  </div>
-  <div class="facts">
-    <article class="fact"><span class="pill official">公式</span><h3>2つの画面は同じ比率</h3><p>外側5.4型（<span class="num">1398×2034</span>）、内側7.6型（<span class="num">1878×2670</span>）。どちらも約1:1.4で、外側の面積は内側のほぼ半分。開閉しても表示の比率が保たれます。</p><p class="src">Apple 技術仕様・ニュースルーム</p></article>
-    <article class="fact"><span class="pill official">公式</span><h3>開くとホーム画面が2ページ並ぶ</h3><p>内側ではホーム画面を2ページ同時に表示。左側には、ウィジェットが縦に並ぶ「今日」の表示があります。</p><p class="src">Apple ニュースルーム／Macworld</p></article>
-    <article class="fact"><span class="pill official">公式</span><h3>Dockは画面の横へ</h3><p>Dock、ロック画面のコントロール、アプリのナビゲーションは画面の横側に移動しました。縦の表示領域を広げるためです。国内の報道では右側に寄せられていると紹介されています。</p><p class="src">Apple ニュースルーム／Business Insider Japan</p></article>
-    <article class="fact"><span class="pill press">報道</span><h3>特大ウィジェット（<span class="num">4×6</span>）</h3><p>iOS 27で追加され、普通のiPhoneならホーム画面1ページ分の大きさ。純正は11アプリ17種類（カレンダー、天気、写真、メモ、ミュージック、TV、リマインダーなど）。</p><p class="src">9to5Mac／iPhone Mania</p></article>
-    <article class="fact"><span class="pill review">レビュー</span><h3>外側は左端に親指が届かない</h3><p>右手で持つと左端と左下が届きにくいため、よく使うアプリを右に寄せるのが最初の設定として勧められています。ケースを付けるなら「左端を移動」で誤タッチを減らせます。</p><p class="src">gori.me</p></article>
-    <article class="fact"><span class="pill press">報道</span><h3>壁紙は縦と横の2枚で1組</h3><p>外側は縦<span class="num">1398×2034</span>、内側は横<span class="num">2670×1878</span>。「壁紙ペアとして設定」か、画面ごとに別々に設定します。同じ1枚を使うと、外側では左右、内側では上下が切れます。</p><p class="src">iClarified／duowallpaper.org</p></article>
-    <article class="fact"><span class="pill review">レビュー</span><h3>アクションボタンがない</h3><p>Touch IDは電源ボタンに内蔵。アクションボタンの代わりに、ショートカットのウィジェットや、ロック画面右下のボタンにショートカットを割り当てる方法が紹介されています。</p><p class="src">gori.me／Apple 技術仕様</p></article>
-    <article class="fact"><span class="pill official">公式</span><h3>置くだけでStandBy</h3><p>充電していなくても、外側・内側のどちらでもStandByになります。写真フレーム、時計、ウィジェット置き場として使え、カレンダーと天気の文字盤も新しく加わりました。</p><p class="src">Apple ニュースルーム</p></article>
-    <article class="fact"><span class="pill official">公式</span><h3>アイコンの見た目は4種類</h3><p>デフォルト・ダーク・クリア・色合い調整（iOS 26から）。クリアは壁紙が透けるガラス風、色合い調整は好きな1色にそろえられます。</p><p class="src">MacRumors／ギズモード・ジャパン</p></article>
-    <article class="fact"><span class="pill official">公式</span><h3>本体は2色</h3><p>スターホワイトとナイトスカイ。純正ケースはサンドとネイビー、キックスタンド付きのFolioはネイビーとトープ。ホーム画面の色を本体に合わせると統一感が出ます。</p><p class="src">Apple ニュースルーム</p></article>
-    <article class="fact"><span class="pill official">公式</span><h3>2つのアプリを並べられる</h3><p>iPhoneで初めてのSplit View。よく使う組み合わせはペアとして保存でき、片方を開くともう片方も一緒に開きます。</p><p class="src">Apple ニュースルーム／gori.me</p></article>
-    <article class="fact"><span class="pill guess">推定</span><h3>アイコンの列×行は未公表</h3><p>内側のホーム画面に何列×何行並ぶかは、まだ公表されていません。この提案書では、1ページを<span class="num">4列×6行</span>として描いています。</p><p class="src">iPhone Mania</p></article>
-  </div>
-</section>
-
-
-<section class="block" id="older">
-  <details class="older">
-    <summary><span class="eyebrow">History</span><b>これまでの案（第1〜4稿）</b><span>イラスト・写真・幾何学模様の壁紙で作った案です</span></summary>
 <section class="block" id="round4">
  <div class="showroom">
   <div class="sec-head">
@@ -832,15 +928,15 @@ p{margin:0}
   <div class="sec-head">
     <p class="eyebrow">Next</p>
     <h2>次に決めたいこと</h2>
-    <p>第5稿を見て、次の5つを教えてください。まだ決まっていないものは空欄で大丈夫です。</p>
+    <p>第6稿を見て、次の5つを教えてください。まだ決まっていないものは空欄で大丈夫です。</p>
   </div>
   <div class="together">
     <ol class="questions">
-      <li><b>気に入った組</b><span>障子の影・満ちる月・夜明けの砂丘・表紙と見返しから、2つまで。</span></li>
-      <li><b>直したいところ</b><span>明るさ、月や柴の位置、柴を影ではなく毛色つきにする、など。</span></li>
-      <li><b>アイコン</b><span>クリア（ガラス）か、白か。</span></li>
-      <li><b>開いた右ページ</b><span>壁紙だけ・予定・柴の写真のどれか。</span></li>
-      <li><b>使う順のアプリ</b><span>決まったら①〜⑩の順で。①〜④がDockに入ります。</span></li>
+      <li><b>まだ見づらいところ</b><span>第6稿で読みにくい、探しにくいと感じたところがあれば。</span></li>
+      <li><b>背景</b><span>墨（暗い）か、生成り（明るい）か。</span></li>
+      <li><b>開いた右ページ</b><span>柴の写真か、今日の予定か。</span></li>
+      <li><b>ロック画面の絵</b><span>第5稿の障子の影・満ちる月・夜明けの砂丘・表紙と見返しから選ぶか、使わないか。</span></li>
+      <li><b>使う順のアプリ</b><span>決まったら①〜⑧の順で。①〜④がDock、⑤〜⑧が右下に入ります。</span></li>
     </ol>
     <div class="answer">
       <label for="answer-template">回答テンプレート</label>
@@ -856,10 +952,9 @@ p{margin:0}
   <div class="deliver">
     <b>回答をもらったら作るもの</b>
     <ul>
-      <li>選んだ組の仕上げ（明るさや位置を調整した実寸の2枚）</li>
-      <li>同じ組の「昼」の2枚（ライトモード用）</li>
       <li>アプリ名入りの配置図（P1・P2・Dock）</li>
-      <li>ロック画面とStandByの合わせ方</li>
+      <li>選んだ背景色とロック画面の絵の組み合わせ（外側・内側）</li>
+      <li>StandByの合わせ方</li>
     </ul>
   </div>
 </section>
@@ -1230,6 +1325,7 @@ const WALL = {
   }
 };
 function wallHTML(id, c, fmt){
+  if(c.solid) return `<span class="solid"></span>`;
   if(c.geo) return geoSVG(geoState.pattern, geoState.pal, fmt);
   if(c.photo){ const ph=c.photo[fmt]; return `<img src="${ph.src}" alt="" style="object-position:${ph.pos||"50% 50%"}" decoding="async">`; }
   return wallSVG(id, c.mode, fmt, tint);
@@ -1347,6 +1443,25 @@ Object.assign(CONCEPTS,{
   r5sakyu:r5("夜明けの砂丘","r5-sakyu"),
   r5hon:r5("表紙と見返し","r5-hon")
 });
+/* round 6: legibility first */
+const R6_EVENTS=[["10:00","ドッグラン","河川敷","#E2A04A"],["13:00","ランチ","","#93C47D"],["17:00","夕方の散歩","公園","#E2A04A"]];
+const R6_LEGEND=`<div class="zones"><p class="zones-h">閉じた画面の読み方</p><ul>`+
+  `<li><span class="z z-look">上</span><div><b>日付と天気</b><p>見るだけのウィジェット。押さないので、親指が届かなくても困りません。</p></div></li>`+
+  `<li><span class="z z-look">左下</span><div><b>柴の写真</b><p>右手の親指が届きにくい角は、眺めるものに使います。</p></div></li>`+
+  `<li><span class="z z-tap">右下</span><div><b>よく使うアプリ4つ</b><p>親指が自然に届く場所。⑤〜⑧の順に入れます。</p></div></li>`+
+  `<li><span class="z z-tap">右端</span><div><b>Dock</b><p>①〜④。閉じても開いても同じ場所にあります。</p></div></li>`+
+  `<li><span class="z z-none">中央</span><div><b>何も置かない</b><p>余白で、上の情報と下のアプリを分けます。</p></div></li>`+
+  `</ul><p class="zones-key"><span><i class="k-look"></i>見るだけ</span><span><i class="k-tap"></i>押す</span></p></div>`;
+const R6_NOTES={
+  dark:`<b>墨</b>本体のナイトスカイになじむ、ほぼ黒の無地です。白いアプリ名もカラーのアイコンも、いちばんはっきり見えます。おすすめはこちら。`,
+  light:`<b>生成り</b>明るい無地です。ホーム画面のアプリ名は白い文字なので、明るい背景では読めません。アイコンを「大」にして名前を消し、色と形で見分けます。`
+};
+CONCEPTS.r6={ name:"第6稿", icons:"color", frame:"night", mode:"dark", p2:"photo", view:"apps", thumb:"off", solid:true,
+  modeNames:{dark:"墨",light:"生成り"}, legend:R6_LEGEND, p2img:"img/r3-shiba-xl.jpg",
+  p2cal:{dow:"火曜日",d:"3",events:R6_EVENTS,tomorrow:[["7:00","柴の散歩","川沿い","#E2A04A"],["15:00","トリミング","","#B48EDB"]]},
+  pages:[[Wd("calendar","S",1,1,{dow:"火曜日",d:"3",events:R6_EVENTS}),Wd("weather","S",3,1),Wd("photo","S",1,5,{img:"img/r3-shiba-sq.jpg"}),S(5,4,6),S(6,3,6),S(7,4,5),S(8,3,5)]],
+  dock:[1,2,3,4],
+  after(){ const n=document.getElementById("r6-note"); if(n) n.innerHTML=R6_NOTES[this.mode]; } };
 function p2Items(c){
   if(c.p2==="none") return [];
   if(c.p2==="calendar" && c.p2cal) return [Wd("calendar","XL",1,1,c.p2cal)];
@@ -1357,9 +1472,18 @@ const OSHI_COLORS=[["赤","#E0475A"],["オレンジ","#EE8434"],["黄","#E0AC22"
 let tint = "#8A5CD6";
 try{ const t=localStorage.getItem("duo-oshi-tint"); if(t && OSHI_COLORS.some(c=>c[1]===t)) tint=t; }catch(e){}
 
+/* generic stand-ins for the default (colour) icons: top, bottom, glyph */
+const COLOR_ICON={
+  message:["#66E080","#2DB84E","#fff"], browser:["#FFFFFF","#E4E8EE","#1677F2"], camera:["#E4E4E8","#A4A4AB","#1C1C1E"],
+  photos:["#FFC94D","#FF8A1A","#fff"], maps:["#E2F5CF","#A3D98B","#2B6A30"], mail:["#62B6FF","#1B74EE","#fff"],
+  music:["#FF6B84","#F2304E","#fff"], calendar:["#FFFFFF","#F0F0F2","#E8392B"], notes:["#FFE57A","#FFC81F","#5B4500"],
+  settings:["#ABABB2","#6C6C73","#fff"], weather:["#72C8FF","#2F8DF0","#fff"], reminders:["#FFFFFF","#F0F0F2","#FF8A1F"],
+  health:["#FFFFFF","#F0F0F2","#FF3B5C"], clock:["#3A3A3E","#151517","#fff"]
+};
 function appHTML(key, k){
   const [jp,gl,col]=APPS[key];
-  return `<span class="tile k${k%3}" style="--app:${col}">${g(gl)}</span><span class="lbl">${jp}</span>`;
+  const ci=COLOR_ICON[key]||[col,mix(col,"#000000",.18),"#fff"];
+  return `<span class="tile k${k%3}" style="--app:${col};--ci0:${ci[0]};--ci1:${ci[1]};--ci-fg:${ci[2]}">${g(gl)}</span><span class="lbl">${jp}</span>`;
 }
 function slotHTML(n, k, c){
   if(c.view==="slots") return `<span class="tile slot k${k%3}"><b>${n}</b></span><span class="lbl">${n<=4?"Dock":n+"番目"}</span>`;
@@ -1385,7 +1509,7 @@ function render(id){
   const p2items=c.p2?p2Items(c):c.pages[1];
   const p1=pageHTML(c,c.pages[0],0), p2=pageHTML(c,p2items,1);
   const attrs=`class="duo device ${c.frame}" data-c="${id}" data-mode="${c.mode}" data-icons="${c.icons}"${id==="oshi"?` style="--tint:${tint}"`:""}`;
-  const modeJP=c.mode==="dark"?"夜":(id==="night"?"夜明け":"昼");
+  const modeJP=c.modeNames?c.modeNames[c.mode]:(c.mode==="dark"?"夜":(id==="night"?"夜明け":"昼"));
   const thumb=c.thumb==="on"?`<div class="thumbmap"></div>`:"";
   const bare=c.show==="wall";
   const coverPage=bare?"":`<div class="page">${p1}${dockHTML(c)}${STATUS}<div class="dots"><i class="on"></i><i></i></div></div>`;
@@ -1393,11 +1517,18 @@ function render(id){
   stage.innerHTML=
    `<figure class="f-cover"><div ${attrs}><div class="screen" role="img" aria-label="${c.name}（${modeJP}）：閉じた状態の外側画面。${bare?"壁紙だけ":"P1とDock"}">`+
    `<div class="wall">${wallHTML(id,c,"cover")}</div>${coverPage}${thumb}</div></div>`+
-   `<figcaption><b>外側 5.4型・閉じた状態</b><span>P1</span></figcaption></figure>`+
+   `<figcaption><b>外側 5.4型・閉じた状態</b><span>P1</span></figcaption></figure>`+(c.legend||"")+
    `<figure class="f-spread"><div ${attrs}><div class="screen" role="img" aria-label="${c.name}（${modeJP}）：開いた状態の内側画面。${bare?"壁紙だけ":"左にP1、右にP2とDock"}">`+
    `<div class="wall">${wallHTML(id,c,"spread")}</div>${spreadPages}<div class="crease"></div></div></div>`+
    `<figcaption><b>内側 7.6型・開いた状態</b><span>P1 ＋ P2</span></figcaption></figure>`;
   const lg=sec.querySelector(".legend"); if(lg) lg.hidden=c.thumb!=="on";
+  if(c.after) c.after();
+}
+/* a single closed screen, for side-by-side comparisons */
+function coverDevice(id, c, label){
+  const attrs=`class="duo device ${c.frame}" data-c="${id}" data-mode="${c.mode}" data-icons="${c.icons}"`;
+  return `<div ${attrs}><div class="screen" role="img" aria-label="${label}"><div class="wall">${wallHTML(id,c,"cover")}</div>`+
+    `<div class="page">${pageHTML(c,c.pages[0],0)}${dockHTML(c)}${STATUS}<div class="dots"><i class="on"></i><i></i></div></div></div></div>`;
 }
 
 /* ---------- round 4: geometric wallpapers ---------- */
@@ -1566,6 +1697,11 @@ if(swWrap){
   });
 }
 
+// round 6: before / after
+const baB=document.querySelector('[data-ba="before"]'), baA=document.querySelector('[data-ba="after"]');
+if(baB) baB.innerHTML=coverDevice("r5shoji",Object.assign({},CONCEPTS.r5shoji,{icons:"clear",view:"apps"}),"第5稿「障子の影」の閉じた画面。障子の格子と影の上に、灰色のガラスのアイコンが並ぶ");
+if(baA) baA.innerHTML=coverDevice("r6",Object.assign({},CONCEPTS.r6,{mode:"dark",view:"apps"}),"第6稿（墨）の閉じた画面。無地の黒に、上に日付と天気、左下に柴の写真、右下にカラーのアイコン");
+
 // setup checklist
 let checks={}; try{ checks=JSON.parse(localStorage.getItem("duo-setup")||"{}")||{}; }catch(e){ checks={}; }
 document.querySelectorAll("#setup input[type=checkbox]").forEach(cb=>{
@@ -1574,11 +1710,11 @@ document.querySelectorAll("#setup input[type=checkbox]").forEach(cb=>{
 });
 
 // answer template
-const TEMPLATE=["【第5稿への回答】","1. 気に入った組（障子の影／満ちる月／夜明けの砂丘／表紙と見返し、2つまで）：","2. 直したいところ（明るさ・位置・柴の毛色など）：","3. アイコン（クリア／白）：","4. 開いた右ページ（壁紙だけ／予定／柴の写真）：","5. 使う順のアプリ（①〜⑩、決まったら）："].join("\n");
+const TEMPLATE=["【第6稿への回答】","1. まだ見づらいところ：","2. 背景（墨／生成り）：","3. 開いた右ページ（柴の写真／今日の予定）：","4. ロック画面の絵（障子の影／満ちる月／夜明けの砂丘／表紙と見返し／使わない）：","5. 使う順のアプリ（①〜⑧、決まったら）："].join("\n");
 const ta=document.getElementById("answer-template"), status=document.getElementById("copy-status");
-let saved=null; try{ saved=localStorage.getItem("duo-answer-5"); }catch(e){}
+let saved=null; try{ saved=localStorage.getItem("duo-answer-6"); }catch(e){}
 ta.value=saved||TEMPLATE;
-ta.addEventListener("input",()=>{ try{ localStorage.setItem("duo-answer-5",ta.value); }catch(e){} });
+ta.addEventListener("input",()=>{ try{ localStorage.setItem("duo-answer-6",ta.value); }catch(e){} });
 document.getElementById("copy-btn").addEventListener("click",()=>{
   const done=()=>{ status.textContent="コピーしました。チャットに貼ってください。"; };
   const fallback=()=>{ ta.focus(); ta.select(); status.textContent="選択しました。⌘C（Ctrl+C）でコピーしてください。"; };
@@ -1586,7 +1722,7 @@ document.getElementById("copy-btn").addEventListener("click",()=>{
 });
 document.getElementById("reset-btn").addEventListener("click",()=>{
   ta.value=TEMPLATE; status.textContent="書き込みを消しました。";
-  try{ localStorage.removeItem("duo-answer-5"); }catch(e){}
+  try{ localStorage.removeItem("duo-answer-6"); }catch(e){}
 });
 
 // for exporting full-size wallpapers
